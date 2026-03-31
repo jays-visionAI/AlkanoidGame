@@ -19,6 +19,8 @@ interface Brick {
   color: string;
   visible: boolean;
   points: number;
+  maxHp: number;    // 내구도 - 이 횟수만큼 맞으면 파괴
+  currentHp: number; // 현재 내구도
   spawnsBall: boolean; // 주황, 파랑, 빨강은 추가 볼 생성
 }
 
@@ -61,12 +63,240 @@ const BRICK_COLS = 10;
 
 // 블록 색상 정의
 const BRICK_COLORS = [
-  { color: '#ecf0f1', name: 'white', spawnsBall: false, points: 5 },    // 흰색 - 플레이어 볼, 추가 볼 없음
-  { color: '#f39c12', name: 'orange', spawnsBall: true, points: 10 },  // 주황색 - 추가 볼 생성
-  { color: '#3498db', name: 'blue', spawnsBall: true, points: 8 },      // 파란색 - 추가 볼 생성
-  { color: '#e74c3c', name: 'red', spawnsBall: true, points: 15 },      // 빨간색 - 추가 볼 생성
-  { color: '#f1c40f', name: 'yellow', spawnsBall: false, points: 12 },   // 노란색 - 추가 볼 없음
+  { color: '#ecf0f1', name: 'white', spawnsBall: false, points: 5, hp: 1 },    // 흰색
+  { color: '#f39c12', name: 'orange', spawnsBall: true, points: 10, hp: 2 },   // 주황색
+  { color: '#3498db', name: 'blue', spawnsBall: true, points: 8, hp: 2 },       // 파란색
+  { color: '#e74c3c', name: 'red', spawnsBall: true, points: 15, hp: 3 },       // 빨간색
+  { color: '#f1c40f', name: 'yellow', spawnsBall: false, points: 12, hp: 2 },   // 노란색
 ];
+
+// ========== Sound System ==========
+class SoundManager {
+  private audioContext: AudioContext | null = null;
+  private sounds: Map<string, AudioBuffer> = new Map();
+  private enabled: boolean = true;
+  private initialized: boolean = false;
+
+  // BGM 관련
+  private bgmSource: AudioBufferSourceNode | null = null;
+  private bgmGain: GainNode | null = null;
+  private bgmPlaying: boolean = false;
+  private bgmLoop: boolean = true;
+  private bgmIntervalId: number | null = null;
+
+  constructor() {
+    // AudioContext는 사용자 상호작용 이후才有
+  }
+
+  initOnUserInteraction() {
+    if (this.initialized) return;
+    try {
+      this.audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+      this.initialized = true;
+    } catch (e) {
+      console.warn('Web Audio API not supported');
+    }
+  }
+
+  private ensureContext() {
+    if (!this.initialized) this.initOnUserInteraction();
+    if (this.audioContext && this.audioContext.state === 'suspended') {
+      this.audioContext.resume();
+    }
+  }
+
+  // 볼이 벽에 부딪힐 때 (상단/좌우 벽)
+  playWallBounce() {
+    this.playTone(300, 0.1, 'sine', 0.3);
+  }
+
+  // 볼이 패들에 부딪힐 때
+  playPaddleHit() {
+    this.playTone(400, 0.15, 'sine', 0.4);
+  }
+
+  // 볼이 벽돌에 부딪혀 파괴될 때
+  playBrickDestroy() {
+    this.playTone(500, 0.2, 'square', 0.3);
+    setTimeout(() => this.playTone(700, 0.15, 'sine', 0.2), 50);
+  }
+
+  // 볼을 잃었을 때
+  playBallLost() {
+    this.playTone(150, 0.4, 'sawtooth', 0.4);
+    setTimeout(() => this.playTone(100, 0.3, 'sine', 0.3), 200);
+  }
+
+  // 라운드 완료
+  playRoundComplete() {
+    const notes = [523, 659, 784, 1047]; // C5, E5, G5, C6
+    notes.forEach((freq, i) => {
+      setTimeout(() => this.playTone(freq, 0.3, 'sine', 0.4), i * 150);
+    });
+  }
+
+  // 게임 오버
+  playGameOver() {
+    const notes = [392, 349, 311, 261]; // G4, F4, Eb4, C4
+    notes.forEach((freq, i) => {
+      setTimeout(() => this.playTone(freq, 0.4, 'sawtooth', 0.3), i * 200);
+    });
+  }
+
+  // 승리
+  playVictory() {
+    const notes = [523, 659, 784, 880, 1047, 1319, 1568]; // C5~G6 ascending
+    notes.forEach((freq, i) => {
+      setTimeout(() => this.playTone(freq, 0.25, 'sine', 0.5), i * 120);
+    });
+  }
+
+  // 게임 시작
+  playGameStart() {
+    this.playTone(440, 0.15, 'sine', 0.4);
+    setTimeout(() => this.playTone(880, 0.2, 'sine', 0.4), 100);
+  }
+
+  // 라운드 시작
+  playRoundStart() {
+    this.playTone(660, 0.1, 'sine', 0.3);
+    setTimeout(() => this.playTone(880, 0.1, 'sine', 0.3), 100);
+    setTimeout(() => this.playTone(1100, 0.15, 'sine', 0.3), 200);
+  }
+
+  private playTone(frequency: number, duration: number, type: OscillatorType = 'sine', volume: number = 0.5) {
+    if (!this.enabled || !this.audioContext) return;
+
+    this.ensureContext();
+    if (!this.audioContext) return;
+
+    try {
+      const oscillator = this.audioContext.createOscillator();
+      const gainNode = this.audioContext.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(this.audioContext.destination);
+      
+      oscillator.type = type;
+      oscillator.frequency.setValueAtTime(frequency, this.audioContext.currentTime);
+      
+      // Envelope for better sound
+      gainNode.gain.setValueAtTime(volume, this.audioContext.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, this.audioContext.currentTime + duration);
+      
+      oscillator.start(this.audioContext.currentTime);
+      oscillator.stop(this.audioContext.currentTime + duration);
+    } catch (e) {
+      // Silently fail
+    }
+  }
+
+  toggle() {
+    this.enabled = !this.enabled;
+    return this.enabled;
+  }
+
+  isEnabled() {
+    return this.enabled;
+  }
+
+  // BGM 시작 (라운지 스타일)
+  startBGM() {
+    if (!this.enabled || !this.audioContext) return;
+    this.ensureContext();
+    if (!this.audioContext) return;
+    // 이미 재생 중이면 중복 시작 방지
+    if (this.bgmPlaying) return;
+    try {
+      this.bgmGain = this.audioContext.createGain();
+      this.bgmGain.connect(this.audioContext.destination);
+      this.bgmGain.gain.setValueAtTime(0.12, this.audioContext.currentTime);
+      
+      // 라운지 스타일 BGM 시작
+      this.playLoungeBGM();
+      this.bgmPlaying = true;
+    } catch (e) {
+      console.warn('BGM playback failed:', e);
+    }
+  }
+
+  private playLoungeBGM() {
+    if (!this.audioContext || !this.bgmGain) return;
+    
+    // 라운지 스타일: 반복되는 멜로디와 드론
+    const melodyNotes = [
+      261.63, 293.66, 329.63, 349.23, // C4, D4, E4, F4
+      293.66, 261.63, 220.00, 261.63, // D4, C4, A3, C4
+    ];
+    
+    const droneFreqs = [130.81, 196.00]; // C3, G3 (드론)
+    
+    const playNote = (index: number) => {
+      if (!this.bgmPlaying || !this.audioContext || !this.bgmGain) return;
+      
+      // 멜로디 노트
+      const osc = this.audioContext.createOscillator();
+      const noteGain = this.audioContext.createGain();
+      osc.connect(noteGain);
+      noteGain.connect(this.bgmGain!);
+      
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(melodyNotes[index % melodyNotes.length], this.audioContext.currentTime);
+      
+      //velope (부드러운 음량 변화)
+      noteGain.gain.setValueAtTime(0, this.audioContext.currentTime);
+      noteGain.gain.linearRampToValueAtTime(0.25, this.audioContext.currentTime + 0.1);
+      noteGain.gain.linearRampToValueAtTime(0, this.audioContext.currentTime + 0.7);
+      
+      osc.start(this.audioContext.currentTime);
+      osc.stop(this.audioContext.currentTime + 0.8);
+      
+      // 다음 노트 예약
+      setTimeout(() => {
+        if (this.bgmPlaying) playNote(index + 1);
+      }, 700);
+    };
+    
+    // 드론 시작 (지속低音)
+    const startDrone = () => {
+      if (!this.bgmPlaying || !this.audioContext || !this.bgmGain) return;
+      droneFreqs.forEach(freq => {
+        const droneOsc = this.audioContext!.createOscillator();
+        const droneGain = this.audioContext!.createGain();
+        droneOsc.connect(droneGain);
+        droneGain.connect(this.bgmGain!);
+        droneOsc.type = 'sine';
+        droneOsc.frequency.setValueAtTime(freq, this.audioContext!.currentTime);
+        droneGain.gain.setValueAtTime(0.08, this.audioContext!.currentTime);
+        droneOsc.start(this.audioContext!.currentTime);
+        // 드론은 계속 재생
+      });
+    };
+    
+    startDrone();
+    playNote(0);
+  }
+
+  // BGM 정지
+  stopBGM() {
+    this.bgmPlaying = false;
+    if (this.bgmSource) {
+      try {
+        this.bgmSource.stop();
+      } catch (e) {}
+      this.bgmSource = null;
+    }
+    if (this.bgmGain) {
+      try {
+        this.bgmGain.disconnect();
+      } catch (e) {}
+      this.bgmGain = null;
+    }
+  }
+}
+
+// Create global sound manager
+const soundManager = new SoundManager();
 
 // Utility functions
 const createBricks = (level: number): Brick[] => {
@@ -89,6 +319,8 @@ const createBricks = (level: number): Brick[] => {
         color: brickType.color,
         visible: true,
         points: brickType.points * level,
+        maxHp: brickType.hp || 1,
+        currentHp: brickType.hp || 1,
         spawnsBall: brickType.spawnsBall,
       });
     }
@@ -164,6 +396,8 @@ function App() {
   // Start game
   const startGame = useCallback(() => {
     const level = 1;
+    soundManager.playGameStart();
+    soundManager.startBGM(); // BGM 시작
     setGameState(prev => ({
       ...prev,
       balls: [createBall(GAME_WIDTH / 2, GAME_HEIGHT - 100, 1, true, level)],
@@ -216,6 +450,9 @@ function App() {
   // Handle keyboard input
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      // Initialize sound on first user interaction
+      soundManager.initOnUserInteraction();
+      
       keysPressed.current.add(e.key);
       if (e.key === ' ' && gameState.phase === 'start') {
         startGame();
@@ -224,6 +461,7 @@ function App() {
         startNextRound();
       }
       if (e.key === ' ' && (gameState.phase === 'gameOver' || gameState.phase === 'victory')) {
+        soundManager.stopBGM(); // BGM 정지
         setGameState(prev => ({ ...prev, phase: 'start' }));
       }
     };
@@ -238,6 +476,52 @@ function App() {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('keyup', handleKeyUp);
+    };
+  }, [gameState.phase, startGame, startNextRound]);
+
+  // Handle touch input (모바일 터치 조작)
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const handleTouchStart = (e: TouchEvent) => {
+      e.preventDefault();
+      soundManager.initOnUserInteraction();
+      
+      // 게임 상태에 따라 다른 동작
+      if (gameState.phase === 'start') {
+        startGame();
+      } else if (gameState.phase === 'roundComplete') {
+        startNextRound();
+      } else if (gameState.phase === 'gameOver' || gameState.phase === 'victory') {
+        soundManager.stopBGM();
+        setGameState(prev => ({ ...prev, phase: 'start' }));
+      }
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      e.preventDefault();
+      if (gameState.phase !== 'playing') return;
+      
+      const touch = e.touches[0];
+      const canvasRect = canvas.getBoundingClientRect();
+      const scaleX = GAME_WIDTH / canvasRect.width;
+      const touchX = (touch.clientX - canvasRect.left) * scaleX;
+      
+      // 패들을 터치 위치로 이동 (좌우만)
+      setGameState(prev => {
+        let newPaddleX = touchX - prev.paddle.width / 2;
+        newPaddleX = Math.max(0, Math.min(GAME_WIDTH - prev.paddle.width, newPaddleX));
+        return { ...prev, paddle: { ...prev.paddle, x: newPaddleX } };
+      });
+    };
+
+    canvas.addEventListener('touchstart', handleTouchStart, { passive: false });
+    canvas.addEventListener('touchmove', handleTouchMove, { passive: false });
+
+    return () => {
+      canvas.removeEventListener('touchstart', handleTouchStart);
+      canvas.removeEventListener('touchmove', handleTouchMove);
     };
   }, [gameState.phase, startGame, startNextRound]);
 
@@ -286,17 +570,24 @@ function App() {
           newBall.y += newBall.vy * deltaTime;
 
           // Wall collision (모든 벽에 대해 반사)
+          let wallBounced = false;
           if (newBall.x - newBall.radius < 0) {
             newBall.vx = Math.abs(newBall.vx);
             newBall.x = newBall.radius;
+            wallBounced = true;
           }
           if (newBall.x + newBall.radius > GAME_WIDTH) {
             newBall.vx = -Math.abs(newBall.vx);
             newBall.x = GAME_WIDTH - newBall.radius;
+            wallBounced = true;
           }
           if (newBall.y - newBall.radius < 0) {
             newBall.vy = Math.abs(newBall.vy);
             newBall.y = newBall.radius;
+            wallBounced = true;
+          }
+          if (wallBounced) {
+            soundManager.playWallBounce();
           }
 
           // Paddle collision
@@ -310,6 +601,7 @@ function App() {
           ) {
             newBall.vy = -Math.abs(newBall.vy);
             newBall.y = paddleTop - newBall.radius;
+            soundManager.playPaddleHit();
             
             // Angle based on where ball hits paddle
             const hitPos = (newBall.x - newState.paddle.x) / newState.paddle.width;
@@ -319,9 +611,10 @@ function App() {
             newBall.vy = -Math.abs(Math.cos(angle) * speed);
           }
 
-          // Brick collision
+          // Brick collision - 튕겨나가며 내구도가 0이 되면 파괴
+          let brickHit = false;
           newState.bricks.forEach(brick => {
-            if (!brick.visible) return;
+            if (!brick.visible || brickHit) return; // 한 번에 하나만
 
             if (
               newBall.x + newBall.radius > brick.x &&
@@ -329,19 +622,29 @@ function App() {
               newBall.y + newBall.radius > brick.y &&
               newBall.y - newBall.radius < brick.y + brick.height
             ) {
-              brick.visible = false;
+              brickHit = true; // 이번 프레임에서 벽돌 충돌 처리 완료
+              
+              // 벽돌 내구도 감소
+              brick.currentHp -= 1;
+              
+              // 점수 획득
               newState.score += brick.points;
               newState.roundStats.scoreEarned += brick.points;
               newState.roundStats.blocksDestroyed += 1;
+              soundManager.playBrickDestroy();
 
-              // 주황, 파랑, 빨강 블록은 추가 볼 생성
-              if (brick.spawnsBall) {
-                const spawnedBall = createSpawnedBall(
-                  brick.x + brick.width / 2,
-                  brick.y + brick.height / 2
-                );
-                newBallsFromBricks.push(spawnedBall);
-                newState.roundStats.ballsAdded += 1;
+              // 내구도가 0이 되면 파괴
+              if (brick.currentHp <= 0) {
+                brick.visible = false;
+                // 주황, 파랑, 빨강 블록은 추가 볼 생성
+                if (brick.spawnsBall) {
+                  const spawnedBall = createSpawnedBall(
+                    brick.x + brick.width / 2,
+                    brick.y + brick.height / 2
+                  );
+                  newBallsFromBricks.push(spawnedBall);
+                  newState.roundStats.ballsAdded += 1;
+                }
               }
 
               // Determine collision side for bounce
@@ -376,8 +679,11 @@ function App() {
         // 플레이어 볼을 잃었을 때
         if (playerBallLost) {
           newState.lives -= 1;
+          soundManager.playBallLost();
           if (newState.lives <= 0) {
             newState.phase = 'gameOver';
+            soundManager.playGameOver();
+            soundManager.stopBGM(); // BGM 정지
           } else {
             // 새로운 흰색 볼 생성
             newBalls.push(createBall(GAME_WIDTH / 2, GAME_HEIGHT - 100, getLevelSpeedMultiplier(newState.level), true, newState.level));
@@ -392,9 +698,12 @@ function App() {
           if (newState.level >= 10) {
             // 10라운드 완료 - 승리
             newState.phase = 'victory';
+            soundManager.playVictory();
+            soundManager.stopBGM(); // BGM 정지
           } else {
             // 라운드 완료 - 중간집계 표시
             newState.phase = 'roundComplete';
+            soundManager.playRoundComplete();
           }
         }
 
@@ -543,7 +852,7 @@ function App() {
       
       ctx.fillStyle = '#2ecc71';
       ctx.font = 'bold 18px Arial';
-      ctx.fillText('SPACE를 눌러 다음 라운드 시작', GAME_WIDTH / 2, GAME_HEIGHT / 2 + 175);
+      ctx.fillText('SPACE 또는 터치로 다음 라운드 시작', GAME_WIDTH / 2, GAME_HEIGHT / 2 + 175);
       ctx.textAlign = 'left';
     }
 
@@ -564,7 +873,7 @@ function App() {
       
       ctx.fillStyle = '#f1c40f';
       ctx.font = 'bold 18px Arial';
-      ctx.fillText('SPACE를 눌러 처음부터 다시 시작', GAME_WIDTH / 2, GAME_HEIGHT / 2 + 95);
+      ctx.fillText('SPACE 또는 터치로 처음부터 다시 시작', GAME_WIDTH / 2, GAME_HEIGHT / 2 + 95);
       ctx.textAlign = 'left';
     }
 
@@ -588,7 +897,7 @@ function App() {
       
       ctx.fillStyle = '#3498db';
       ctx.font = 'bold 18px Arial';
-      ctx.fillText('SPACE를 눌러 처음부터 다시 시작', GAME_WIDTH / 2, GAME_HEIGHT / 2 + 90);
+      ctx.fillText('SPACE 또는 터치로 처음부터 다시 시작', GAME_WIDTH / 2, GAME_HEIGHT / 2 + 90);
       ctx.textAlign = 'left';
     }
 
@@ -626,7 +935,7 @@ function App() {
       
       ctx.fillStyle = '#2ecc71';
       ctx.font = 'bold 20px Arial';
-      ctx.fillText('SPACE를 눌러 시작', GAME_WIDTH / 2, GAME_HEIGHT / 2 + 205);
+      ctx.fillText('SPACE 또는 터치로 시작', GAME_WIDTH / 2, GAME_HEIGHT / 2 + 205);
       ctx.textAlign = 'left';
     }
   }, [gameState]);
@@ -638,7 +947,7 @@ function App() {
           ref={canvasRef}
           width={GAME_WIDTH}
           height={GAME_HEIGHT}
-          className="border-4 border-gray-700 rounded-lg shadow-2xl"
+          className="border-4 border-gray-700 rounded-lg shadow-2xl touch-none"
         />
         
         {/* Game info panel */}

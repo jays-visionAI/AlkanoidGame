@@ -28,10 +28,10 @@
   "discovery_completion_score": 100,
   "active_blueprint_view": "screen",
   "version": 1,
-  "last_saved_at": "2026-03-30T03:42:01.880Z",
+  "last_saved_at": "2026-03-30T20:47:30.938Z",
   "directory": "/Users/sangjaeseo/BlueforgeProjects/알카노이드",
-  "blueprint_source": "llm",
-  "blueprint_generated_at": "2026-03-30T03:12:03.547Z",
+  "blueprint_source": "chat",
+  "blueprint_generated_at": "2026-03-30T20:47:30.828Z",
   "__taskBoard": {
     "project_id": "98a2849f-bf26-4272-a376-0fea63fb4f91",
     "tasks": [
@@ -288,5 +288,6391 @@
     "current_run_type": null,
     "created_at": "2026-03-30T03:42:01.868Z",
     "updated_at": "2026-03-30T03:42:01.868Z"
-  }
+  },
+  "ssot_model": {
+    "projectId": "chat-blueprint",
+    "version": 1,
+    "objects": {
+      "scr-001": {
+        "id": "scr-001",
+        "objectType": "screen",
+        "title": "랜딩 페이지",
+        "summary": "게임 소개 및 시작 버튼 제공",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-001",
+          "ent-001"
+        ],
+        "metadata": {
+          "category": "landing",
+          "wireframeBlocks": [
+            "hero_section",
+            "game_preview",
+            "cta_button",
+            "footer"
+          ],
+          "linkedFeatures": [
+            "feat-001"
+          ],
+          "linkedEntities": [
+            "ent-001"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-002": {
+        "id": "scr-002",
+        "objectType": "screen",
+        "title": "로그인 페이지",
+        "summary": "사용자 인증 처리",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-002",
+          "ent-001",
+          "ent-002",
+          "step-001",
+          "step-002"
+        ],
+        "metadata": {
+          "category": "auth",
+          "wireframeBlocks": [
+            "header",
+            "login_form",
+            "social_login_buttons",
+            "signup_link"
+          ],
+          "linkedFeatures": [
+            "feat-002"
+          ],
+          "linkedEntities": [
+            "ent-001",
+            "ent-002"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-003": {
+        "id": "scr-003",
+        "objectType": "screen",
+        "title": "회원가입 페이지",
+        "summary": "새 사용자 등록",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-002",
+          "ent-001"
+        ],
+        "metadata": {
+          "category": "auth",
+          "wireframeBlocks": [
+            "header",
+            "signup_form",
+            "terms_agreement",
+            "login_link"
+          ],
+          "linkedFeatures": [
+            "feat-002"
+          ],
+          "linkedEntities": [
+            "ent-001"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-004": {
+        "id": "scr-004",
+        "objectType": "screen",
+        "title": "비밀번호 재설정 페이지",
+        "summary": "비밀번호 찾기 및 재설정",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-002",
+          "ent-001"
+        ],
+        "metadata": {
+          "category": "auth",
+          "wireframeBlocks": [
+            "header",
+            "reset_form",
+            "email_input",
+            "back_to_login"
+          ],
+          "linkedFeatures": [
+            "feat-002"
+          ],
+          "linkedEntities": [
+            "ent-001"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-005": {
+        "id": "scr-005",
+        "objectType": "screen",
+        "title": "게임 메인 메뉴",
+        "summary": "게임 모드 선택 및 메뉴 네비게이션",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-001",
+          "feat-003",
+          "ent-001",
+          "ent-003",
+          "step-004"
+        ],
+        "metadata": {
+          "category": "dashboard",
+          "wireframeBlocks": [
+            "header",
+            "game_modes",
+            "quick_play_button",
+            "user_info"
+          ],
+          "linkedFeatures": [
+            "feat-001",
+            "feat-003"
+          ],
+          "linkedEntities": [
+            "ent-001",
+            "ent-003"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-006": {
+        "id": "scr-006",
+        "objectType": "screen",
+        "title": "게임플레이 화면",
+        "summary": "알카노이드 게임 진행",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-001",
+          "feat-004",
+          "ent-003",
+          "ent-004",
+          "ent-005",
+          "step-001",
+          "step-002",
+          "step-003"
+        ],
+        "metadata": {
+          "category": "detail",
+          "wireframeBlocks": [
+            "game_canvas",
+            "score_display",
+            "lives_indicator",
+            "pause_button"
+          ],
+          "linkedFeatures": [
+            "feat-001",
+            "feat-004"
+          ],
+          "linkedEntities": [
+            "ent-003",
+            "ent-004",
+            "ent-005"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-007": {
+        "id": "scr-007",
+        "objectType": "screen",
+        "title": "일시정지 화면",
+        "summary": "게임 일시정지 및 옵션 제공",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-001",
+          "ent-003",
+          "ent-005"
+        ],
+        "metadata": {
+          "category": "notification",
+          "wireframeBlocks": [
+            "pause_overlay",
+            "resume_button",
+            "quit_button",
+            "settings_button"
+          ],
+          "linkedFeatures": [
+            "feat-001"
+          ],
+          "linkedEntities": [
+            "ent-003",
+            "ent-005"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-008": {
+        "id": "scr-008",
+        "objectType": "screen",
+        "title": "게임 오버 화면",
+        "summary": "게임 종료 후 점수 및 재시작 옵션",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-001",
+          "feat-004",
+          "ent-003",
+          "ent-004",
+          "step-004",
+          "step-005"
+        ],
+        "metadata": {
+          "category": "report",
+          "wireframeBlocks": [
+            "final_score",
+            "high_score_indicator",
+            "restart_button",
+            "menu_button",
+            "share_button"
+          ],
+          "linkedFeatures": [
+            "feat-001",
+            "feat-004"
+          ],
+          "linkedEntities": [
+            "ent-003",
+            "ent-004"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-009": {
+        "id": "scr-009",
+        "objectType": "screen",
+        "title": "리더보드 화면",
+        "summary": "전체 사용자 점수 확인",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-004",
+          "ent-004"
+        ],
+        "metadata": {
+          "category": "list",
+          "wireframeBlocks": [
+            "header",
+            "leaderboard_table",
+            "filters",
+            "pagination"
+          ],
+          "linkedFeatures": [
+            "feat-004"
+          ],
+          "linkedEntities": [
+            "ent-004"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-010": {
+        "id": "scr-010",
+        "objectType": "screen",
+        "title": "마이 프로필 페이지",
+        "summary": "사용자 정보 및 게임 통계",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-004",
+          "feat-002",
+          "ent-001",
+          "ent-003",
+          "ent-004"
+        ],
+        "metadata": {
+          "category": "profile",
+          "wireframeBlocks": [
+            "profile_header",
+            "stats_cards",
+            "recent_games",
+            "achievements"
+          ],
+          "linkedFeatures": [
+            "feat-002",
+            "feat-004"
+          ],
+          "linkedEntities": [
+            "ent-001",
+            "ent-003",
+            "ent-004"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-011": {
+        "id": "scr-011",
+        "objectType": "screen",
+        "title": "게임 설정 페이지",
+        "summary": "게임 사운드, 그래픽, 컨트롤 설정",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-005",
+          "ent-005"
+        ],
+        "metadata": {
+          "category": "settings",
+          "wireframeBlocks": [
+            "settings_form",
+            "audio_controls",
+            "visual_controls",
+            "key_bindings"
+          ],
+          "linkedFeatures": [
+            "feat-005"
+          ],
+          "linkedEntities": [
+            "ent-005"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-012": {
+        "id": "scr-012",
+        "objectType": "screen",
+        "title": "계정 설정 페이지",
+        "summary": "계정 정보 수정 및 관리",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-002",
+          "ent-001"
+        ],
+        "metadata": {
+          "category": "settings",
+          "wireframeBlocks": [
+            "account_form",
+            "password_change",
+            "email_change",
+            "delete_account"
+          ],
+          "linkedFeatures": [
+            "feat-002"
+          ],
+          "linkedEntities": [
+            "ent-001"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-013": {
+        "id": "scr-013",
+        "objectType": "screen",
+        "title": "어드민 대시보드",
+        "summary": "전체 게임 데이터 및 사용자 관리",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-006",
+          "ent-001",
+          "ent-003",
+          "ent-004",
+          "step-001",
+          "step-002",
+          "step-003",
+          "step-004"
+        ],
+        "metadata": {
+          "category": "admin",
+          "wireframeBlocks": [
+            "sidebar",
+            "stats_overview",
+            "users_table",
+            "activity_log"
+          ],
+          "linkedFeatures": [
+            "feat-006"
+          ],
+          "linkedEntities": [
+            "ent-001",
+            "ent-003",
+            "ent-004"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-014": {
+        "id": "scr-014",
+        "objectType": "screen",
+        "title": "사용자 관리 페이지",
+        "summary": "사용자 목록 및 권한 관리",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-006",
+          "ent-001"
+        ],
+        "metadata": {
+          "category": "admin",
+          "wireframeBlocks": [
+            "header",
+            "user_table",
+            "search_filter",
+            "action_buttons"
+          ],
+          "linkedFeatures": [
+            "feat-006"
+          ],
+          "linkedEntities": [
+            "ent-001"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-015": {
+        "id": "scr-015",
+        "objectType": "screen",
+        "title": "게임 통계 페이지",
+        "summary": "게임 데이터 분석 및 리포트",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-006",
+          "feat-004",
+          "ent-003",
+          "ent-004"
+        ],
+        "metadata": {
+          "category": "report",
+          "wireframeBlocks": [
+            "date_filter",
+            "charts",
+            "export_button",
+            "summary_cards"
+          ],
+          "linkedFeatures": [
+            "feat-006",
+            "feat-004"
+          ],
+          "linkedEntities": [
+            "ent-003",
+            "ent-004"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-016": {
+        "id": "scr-016",
+        "objectType": "screen",
+        "title": "게임 레벨 편집기",
+        "summary": "커스텀 레벨 생성 및 관리",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-006",
+          "feat-001",
+          "ent-006"
+        ],
+        "metadata": {
+          "category": "form",
+          "wireframeBlocks": [
+            "grid_editor",
+            "brick_palette",
+            "save_controls",
+            "preview_mode"
+          ],
+          "linkedFeatures": [
+            "feat-001",
+            "feat-006"
+          ],
+          "linkedEntities": [
+            "ent-006"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-017": {
+        "id": "scr-017",
+        "objectType": "screen",
+        "title": "튜토리얼 화면",
+        "summary": "게임 조작법 및 규칙 안내",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-001",
+          "ent-001"
+        ],
+        "metadata": {
+          "category": "onboarding",
+          "wireframeBlocks": [
+            "step_indicators",
+            "instruction_content",
+            "demo_area",
+            "skip_button"
+          ],
+          "linkedFeatures": [
+            "feat-001"
+          ],
+          "linkedEntities": [
+            "ent-001"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-018": {
+        "id": "scr-018",
+        "objectType": "screen",
+        "title": "업적 화면",
+        "summary": "달성한 업적 및 보상 확인",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-004",
+          "ent-007"
+        ],
+        "metadata": {
+          "category": "list",
+          "wireframeBlocks": [
+            "achievement_grid",
+            "progress_bars",
+            "rewards_section"
+          ],
+          "linkedFeatures": [
+            "feat-004"
+          ],
+          "linkedEntities": [
+            "ent-007"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-019": {
+        "id": "scr-019",
+        "objectType": "screen",
+        "title": "상점 화면",
+        "summary": "게임 내 아이템 구매",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-007",
+          "ent-008"
+        ],
+        "metadata": {
+          "category": "payment",
+          "wireframeBlocks": [
+            "item_grid",
+            "coin_balance",
+            "purchase_modal",
+            "transaction_history"
+          ],
+          "linkedFeatures": [
+            "feat-007"
+          ],
+          "linkedEntities": [
+            "ent-008"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "scr-020": {
+        "id": "scr-020",
+        "objectType": "screen",
+        "title": "알림 센터",
+        "summary": "시스템 알림 및 메시지 확인",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-006",
+          "ent-009"
+        ],
+        "metadata": {
+          "category": "notification",
+          "wireframeBlocks": [
+            "notification_list",
+            "filter_tabs",
+            "mark_read_button"
+          ],
+          "linkedFeatures": [
+            "feat-006"
+          ],
+          "linkedEntities": [
+            "ent-009"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "screen",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "feat-001": {
+        "id": "feat-001",
+        "objectType": "feature",
+        "title": "게임 핵심 엔진",
+        "summary": "알카노이드 브릭-breaking 게임의 핵심 메커니즘으로 공 이동, 벽 반사, 브릭 충돌, 파워업 시스템, 레벨 진행을 처리한다",
+        "status": "ai_suggested",
+        "priority": "p0",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "scr-001",
+          "scr-005",
+          "scr-006",
+          "scr-007",
+          "scr-008",
+          "scr-017",
+          "scr-016",
+          "arch-001",
+          "arch-005",
+          "arch-006",
+          "arch-007",
+          "step-001",
+          "step-002",
+          "api-010",
+          "api-011",
+          "api-012",
+          "api-013",
+          "api-014",
+          "ent-001",
+          "ent-003",
+          "ent-004",
+          "ent-005"
+        ],
+        "metadata": {
+          "sourceScreenIds": [
+            "scr-001",
+            "scr-005",
+            "scr-006",
+            "scr-007",
+            "scr-008",
+            "scr-017"
+          ],
+          "priority": "must_have"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "feature",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "feat-002": {
+        "id": "feat-002",
+        "objectType": "feature",
+        "title": "사용자 인증 시스템",
+        "summary": "JWT 기반 사용자 등록, 로그인, 세션 관리, 비밀번호 재설정, OAuth 소셜 로그인 기능을 제공한다",
+        "status": "ai_suggested",
+        "priority": "p0",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "scr-002",
+          "scr-003",
+          "scr-004",
+          "scr-012",
+          "scr-010",
+          "arch-001",
+          "arch-002",
+          "arch-003",
+          "step-001",
+          "step-002",
+          "step-003",
+          "step-004",
+          "api-001",
+          "api-002",
+          "api-003",
+          "api-004",
+          "api-005",
+          "api-006",
+          "api-007",
+          "api-008",
+          "api-009",
+          "ent-001",
+          "ent-002"
+        ],
+        "metadata": {
+          "sourceScreenIds": [
+            "scr-002",
+            "scr-003",
+            "scr-004",
+            "scr-012"
+          ],
+          "priority": "must_have"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "feature",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "feat-003": {
+        "id": "feat-003",
+        "objectType": "feature",
+        "title": "게임 모드 시스템",
+        "summary": "클래식 모드, 타임어택 모드, 무한 모드 등 다양한 게임 모드를 지원하고 모드별 스코어링 로직을 처리한다",
+        "status": "ai_suggested",
+        "priority": "p0",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "scr-005",
+          "arch-001",
+          "arch-006",
+          "api-021",
+          "api-022",
+          "api-023",
+          "api-024",
+          "ent-001",
+          "ent-003"
+        ],
+        "metadata": {
+          "sourceScreenIds": [
+            "scr-005"
+          ],
+          "priority": "must_have"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "feature",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "feat-004": {
+        "id": "feat-004",
+        "objectType": "feature",
+        "title": "점수 및 리더보드 시스템",
+        "summary": "실시간 점수 추적, 글로벌 리더보드, 개인 최고 기록 관리, 업적 시스템, 통계 분석을 처리한다",
+        "status": "ai_suggested",
+        "priority": "p0",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "scr-006",
+          "scr-008",
+          "scr-009",
+          "scr-010",
+          "scr-018",
+          "scr-015",
+          "arch-001",
+          "arch-002",
+          "arch-003",
+          "arch-004",
+          "arch-005",
+          "step-003",
+          "step-004",
+          "step-005",
+          "api-015",
+          "api-016",
+          "api-017",
+          "api-018",
+          "api-025",
+          "api-026",
+          "ent-003",
+          "ent-004",
+          "ent-005",
+          "ent-001",
+          "ent-007"
+        ],
+        "metadata": {
+          "sourceScreenIds": [
+            "scr-006",
+            "scr-008",
+            "scr-009",
+            "scr-010",
+            "scr-018"
+          ],
+          "priority": "must_have"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "feature",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "feat-005": {
+        "id": "feat-005",
+        "objectType": "feature",
+        "title": "게임 설정 관리",
+        "summary": "사운드 볼륨, 효과음/배경음 토글, 그래픽 품질, 키보드 단축키 커스텀, 게임 난이도 설정을 저장하고 적용한다",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "scr-011",
+          "arch-001",
+          "arch-002",
+          "arch-003",
+          "api-019",
+          "api-020",
+          "ent-005"
+        ],
+        "metadata": {
+          "sourceScreenIds": [
+            "scr-011"
+          ],
+          "priority": "should_have"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "feature",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "feat-006": {
+        "id": "feat-006",
+        "objectType": "feature",
+        "title": "어드민 대시보드 및 관리",
+        "summary": "사용자 관리, 게임 통계 모니터링, 레벨 관리, 시스템 설정, 활동 로그 확인, 알림 발송 기능을 제공한다",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "scr-013",
+          "scr-014",
+          "scr-015",
+          "scr-016",
+          "scr-020",
+          "arch-001",
+          "arch-002",
+          "arch-003",
+          "arch-006",
+          "step-001",
+          "step-002",
+          "step-003",
+          "step-004",
+          "api-029",
+          "api-030",
+          "api-031",
+          "api-032",
+          "api-033",
+          "api-034",
+          "api-035",
+          "ent-001",
+          "ent-003",
+          "ent-004",
+          "ent-006",
+          "ent-009"
+        ],
+        "metadata": {
+          "sourceScreenIds": [
+            "scr-013",
+            "scr-014",
+            "scr-015",
+            "scr-016",
+            "scr-020"
+          ],
+          "priority": "should_have"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "feature",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "feat-007": {
+        "id": "feat-007",
+        "objectType": "feature",
+        "title": "게임 상점 및 아이템 시스템",
+        "summary": "게임 코인 기반 아이템 구매, 파워업 아이템, 스킨, 생명 추가 등 인앱 구매 시스템을 처리한다",
+        "status": "ai_suggested",
+        "priority": "p2",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "scr-019",
+          "arch-001",
+          "api-027",
+          "api-028",
+          "ent-008"
+        ],
+        "metadata": {
+          "sourceScreenIds": [
+            "scr-019"
+          ],
+          "priority": "nice_to_have"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "feature",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "arch-001": {
+        "id": "arch-001",
+        "objectType": "architecture_node",
+        "title": "React 프론트엔드",
+        "summary": "React 18과 TypeScript를 사용한 SPA 애플리케이션으로, 게임Canvas 렌더링, 상태 관리(Redux Toolkit), 라우팅(React Router)을 담당한다",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-001",
+          "feat-002",
+          "feat-003",
+          "feat-004",
+          "feat-005",
+          "feat-006",
+          "feat-007"
+        ],
+        "metadata": {
+          "archType": "frontend",
+          "technologies": [
+            "React 18",
+            "TypeScript",
+            "Redux Toolkit",
+            "React Router",
+            "HTML5 Canvas"
+          ],
+          "relatedFeatureIds": [
+            "feat-001",
+            "feat-002",
+            "feat-003",
+            "feat-004",
+            "feat-005",
+            "feat-006",
+            "feat-007"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "architecture",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "arch-002": {
+        "id": "arch-002",
+        "objectType": "architecture_node",
+        "title": "Node.js 백엔드 API",
+        "summary": "Express.js 기반 RESTful API 서버로, 인증, 게임 데이터 처리, 리더보드, 설정 저장, 어드민 기능을 제공한다",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-002",
+          "feat-004",
+          "feat-005",
+          "feat-006"
+        ],
+        "metadata": {
+          "archType": "backend",
+          "technologies": [
+            "Node.js",
+            "Express.js",
+            "TypeScript",
+            "JWT",
+            "bcrypt"
+          ],
+          "relatedFeatureIds": [
+            "feat-002",
+            "feat-004",
+            "feat-005",
+            "feat-006"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "architecture",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "arch-003": {
+        "id": "arch-003",
+        "objectType": "architecture_node",
+        "title": "MongoDB 데이터베이스",
+        "summary": "게임 데이터, 사용자 정보, 점수 기록, 설정, 레벨 데이터를 저장하는 문서 기반 데이터베이스",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-002",
+          "feat-004",
+          "feat-005",
+          "feat-006"
+        ],
+        "metadata": {
+          "archType": "database",
+          "technologies": [
+            "MongoDB",
+            "Mongoose ODM"
+          ],
+          "relatedFeatureIds": [
+            "feat-002",
+            "feat-004",
+            "feat-005",
+            "feat-006"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "architecture",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "arch-004": {
+        "id": "arch-004",
+        "objectType": "architecture_node",
+        "title": "Redis 캐시 레이어",
+        "summary": "리더보드, 세션, 게임 상태 임시 저장소로 사용되어 데이터베이스 부하를 줄이고 응답 속도를 향상시킨다",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-004"
+        ],
+        "metadata": {
+          "archType": "cache",
+          "technologies": [
+            "Redis",
+            "ioredis"
+          ],
+          "relatedFeatureIds": [
+            "feat-004"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "architecture",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "arch-005": {
+        "id": "arch-005",
+        "objectType": "architecture_node",
+        "title": "Socket.io 실시간 통신",
+        "summary": "실시간 점수 업데이트, 멀티플레이어 게임, 채팅, 라이브 리더보드 변경 알림을 위한 WebSocket 서비스",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-001",
+          "feat-004"
+        ],
+        "metadata": {
+          "archType": "service",
+          "technologies": [
+            "Socket.io",
+            "Redis Adapter"
+          ],
+          "relatedFeatureIds": [
+            "feat-001",
+            "feat-004"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "architecture",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "arch-006": {
+        "id": "arch-006",
+        "objectType": "architecture_node",
+        "title": "AWS S3/CDN 스토리지",
+        "summary": "게임 에셋(이미지, 사운드), 사용자 프로필 이미지, 커스텀 레벨 데이터 저장을 위한 클라우드 스토리지",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-001",
+          "feat-003",
+          "feat-006"
+        ],
+        "metadata": {
+          "archType": "infrastructure",
+          "technologies": [
+            "AWS S3",
+            "CloudFront CDN"
+          ],
+          "relatedFeatureIds": [
+            "feat-001",
+            "feat-003",
+            "feat-006"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "architecture",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "arch-007": {
+        "id": "arch-007",
+        "objectType": "architecture_node",
+        "title": "게임 서버 클러스터",
+        "summary": "게임 로직 처리 및 물리엔진 연산을 담당하는 분리된 게임 서버로, 수평 확장이 가능하다",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "feat-001"
+        ],
+        "metadata": {
+          "archType": "service",
+          "technologies": [
+            "Node.js Cluster",
+            "PM2"
+          ],
+          "relatedFeatureIds": [
+            "feat-001"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "architecture",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "step-001": {
+        "id": "step-001",
+        "objectType": "process_step",
+        "title": "어드민 권한 인증 확인",
+        "summary": "어드민 대시보드 데이터 동기화: 어드민 권한 인증 확인",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "step-002",
+          "scr-002",
+          "feat-002",
+          "scr-006",
+          "feat-001",
+          "scr-013",
+          "feat-006"
+        ],
+        "metadata": {
+          "processId": "proc-003",
+          "processName": "어드민 대시보드 데이터 동기화",
+          "trigger": "어드민 사용자가 대시보드 접속",
+          "actor": "system",
+          "screenId": "scr-013",
+          "featureId": "feat-006"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "workflow",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "step-002": {
+        "id": "step-002",
+        "objectType": "process_step",
+        "title": "전체 사용자 수, 게임 세션 수, 일일 활성用户 조회",
+        "summary": "어드민 대시보드 데이터 동기화: 전체 사용자 수, 게임 세션 수, 일일 활성用户 조회",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "step-001",
+          "step-003",
+          "scr-002",
+          "feat-002",
+          "scr-006",
+          "feat-001",
+          "scr-013",
+          "feat-006"
+        ],
+        "metadata": {
+          "processId": "proc-003",
+          "processName": "어드민 대시보드 데이터 동기화",
+          "trigger": "어드민 사용자가 대시보드 접속",
+          "actor": "system",
+          "screenId": "scr-013",
+          "featureId": "feat-006"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "workflow",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "step-003": {
+        "id": "step-003",
+        "objectType": "process_step",
+        "title": "최근 활동 로그 조회 및 표시",
+        "summary": "어드민 대시보드 데이터 동기화: 최근 활동 로그 조회 및 표시",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "step-002",
+          "step-004",
+          "feat-002",
+          "scr-006",
+          "feat-004",
+          "scr-013",
+          "feat-006"
+        ],
+        "metadata": {
+          "processId": "proc-003",
+          "processName": "어드민 대시보드 데이터 동기화",
+          "trigger": "어드민 사용자가 대시보드 접속",
+          "actor": "system",
+          "screenId": "scr-013",
+          "featureId": "feat-006"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "workflow",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "step-004": {
+        "id": "step-004",
+        "objectType": "process_step",
+        "title": "WebSocket을 통한 실시간 통계 업데이트 구독",
+        "summary": "어드민 대시보드 데이터 동기화: WebSocket을 통한 실시간 통계 업데이트 구독",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "step-003",
+          "step-005",
+          "scr-005",
+          "feat-002",
+          "scr-008",
+          "feat-004",
+          "scr-013",
+          "feat-006"
+        ],
+        "metadata": {
+          "processId": "proc-003",
+          "processName": "어드민 대시보드 데이터 동기화",
+          "trigger": "어드민 사용자가 대시보드 접속",
+          "actor": "system",
+          "screenId": "scr-013",
+          "featureId": "feat-006"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "workflow",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "step-005": {
+        "id": "step-005",
+        "objectType": "process_step",
+        "title": "점수 저장 및 리더보드 업데이트",
+        "summary": "게임 플레이 및 점수 저장: 점수 저장 및 리더보드 업데이트",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "step-004",
+          "scr-008",
+          "feat-004"
+        ],
+        "metadata": {
+          "processId": "proc-002",
+          "processName": "게임 플레이 및 점수 저장",
+          "trigger": "사용자가 게임 시작 버튼 클릭",
+          "actor": "system",
+          "screenId": "scr-008",
+          "featureId": "feat-004"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "workflow",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "ent-001": {
+        "id": "ent-001",
+        "objectType": "entity",
+        "title": "User",
+        "summary": "Entity: User (14 fields)",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "scr-001",
+          "scr-002",
+          "scr-003",
+          "scr-004",
+          "scr-005",
+          "scr-010",
+          "scr-012",
+          "scr-013",
+          "scr-014",
+          "scr-017",
+          "api-001",
+          "api-002",
+          "api-005",
+          "api-006",
+          "api-007",
+          "api-008",
+          "api-009",
+          "api-031",
+          "api-032",
+          "api-033",
+          "api-034",
+          "api-035",
+          "feat-001",
+          "feat-002",
+          "feat-003",
+          "feat-004",
+          "feat-006"
+        ],
+        "metadata": {
+          "fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true,
+              "description": "MongoDB ObjectId, 기본 키"
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "required": true,
+              "description": "사용자 이메일, 고유값"
+            },
+            {
+              "name": "passwordHash",
+              "type": "string",
+              "required": true,
+              "description": "bcrypt로 해시화된 비밀번호"
+            },
+            {
+              "name": "username",
+              "type": "string",
+              "required": true,
+              "description": "게임 내 닉네임"
+            },
+            {
+              "name": "avatarUrl",
+              "type": "string",
+              "required": false,
+              "description": "프로필 이미지 URL"
+            },
+            {
+              "name": "role",
+              "type": "enum",
+              "required": true,
+              "description": "user, admin, moderator 역할"
+            },
+            {
+              "name": "coins",
+              "type": "number",
+              "required": true,
+              "description": "게임 내 코인 잔액"
+            },
+            {
+              "name": "highScore",
+              "type": "number",
+              "required": false,
+              "description": "최고 점수"
+            },
+            {
+              "name": "totalGamesPlayed",
+              "type": "number",
+              "required": true,
+              "description": "총 플레이 횟수"
+            },
+            {
+              "name": "totalPlayTime",
+              "type": "number",
+              "required": true,
+              "description": "총 플레이 시간(초)"
+            },
+            {
+              "name": "isEmailVerified",
+              "type": "boolean",
+              "required": true,
+              "description": "이메일 인증 여부"
+            },
+            {
+              "name": "lastLoginAt",
+              "type": "date",
+              "required": false,
+              "description": "마지막 로그인 시간"
+            },
+            {
+              "name": "createdAt",
+              "type": "date",
+              "required": true,
+              "description": "계정 생성일"
+            },
+            {
+              "name": "updatedAt",
+              "type": "date",
+              "required": true,
+              "description": "정보 수정일"
+            }
+          ],
+          "sourceScreenIds": [
+            "scr-002",
+            "scr-003",
+            "scr-010",
+            "scr-012",
+            "scr-014"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "ent-002": {
+        "id": "ent-002",
+        "objectType": "entity",
+        "title": "AuthSession",
+        "summary": "Entity: AuthSession (7 fields)",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "scr-002",
+          "api-003",
+          "api-004",
+          "feat-002"
+        ],
+        "metadata": {
+          "fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true,
+              "description": "MongoDB ObjectId"
+            },
+            {
+              "name": "userId",
+              "type": "reference",
+              "required": true,
+              "referenceEntity": "User"
+            },
+            {
+              "name": "refreshToken",
+              "type": "string",
+              "required": true,
+              "description": "JWT 리프레시 토큰"
+            },
+            {
+              "name": "userAgent",
+              "type": "string",
+              "required": false,
+              "description": "클라이언트 User-Agent"
+            },
+            {
+              "name": "ipAddress",
+              "type": "string",
+              "required": false,
+              "description": "접속 IP 주소"
+            },
+            {
+              "name": "expiresAt",
+              "type": "date",
+              "required": true,
+              "description": "세션 만료 시간"
+            },
+            {
+              "name": "createdAt",
+              "type": "date",
+              "required": true,
+              "description": "세션 생성 시간"
+            }
+          ],
+          "sourceScreenIds": [
+            "scr-002"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "ent-003": {
+        "id": "ent-003",
+        "objectType": "entity",
+        "title": "GameSession",
+        "summary": "Entity: GameSession (12 fields)",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "scr-005",
+          "scr-006",
+          "scr-007",
+          "scr-008",
+          "scr-010",
+          "scr-013",
+          "scr-015",
+          "api-010",
+          "api-011",
+          "api-012",
+          "api-013",
+          "api-014",
+          "feat-001",
+          "feat-003",
+          "feat-004",
+          "feat-006"
+        ],
+        "metadata": {
+          "fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true,
+              "description": "MongoDB ObjectId"
+            },
+            {
+              "name": "userId",
+              "type": "reference",
+              "required": true,
+              "referenceEntity": "User"
+            },
+            {
+              "name": "gameMode",
+              "type": "enum",
+              "required": true,
+              "description": "classic, timeAttack, endless"
+            },
+            {
+              "name": "level",
+              "type": "number",
+              "required": true,
+              "description": "현재 레벨"
+            },
+            {
+              "name": "score",
+              "type": "number",
+              "required": true,
+              "description": "현재 점수"
+            },
+            {
+              "name": "lives",
+              "type": "number",
+              "required": true,
+              "description": "남은 생명 수"
+            },
+            {
+              "name": "status",
+              "type": "enum",
+              "required": true,
+              "description": "playing, paused, completed, abandoned"
+            },
+            {
+              "name": "playDuration",
+              "type": "number",
+              "required": false,
+              "description": "플레이 시간(초)"
+            },
+            {
+              "name": "bricksDestroyed",
+              "type": "number",
+              "required": false,
+              "description": "파괴한 브릭 수"
+            },
+            {
+              "name": "powerupsCollected",
+              "type": "number",
+              "required": false,
+              "description": "얻은 파워업 수"
+            },
+            {
+              "name": "startedAt",
+              "type": "date",
+              "required": true,
+              "description": "게임 시작 시간"
+            },
+            {
+              "name": "endedAt",
+              "type": "date",
+              "required": false,
+              "description": "게임 종료 시간"
+            }
+          ],
+          "sourceScreenIds": [
+            "scr-006",
+            "scr-007",
+            "scr-008",
+            "scr-013"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "ent-004": {
+        "id": "ent-004",
+        "objectType": "entity",
+        "title": "Score",
+        "summary": "Entity: Score (10 fields)",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "scr-006",
+          "scr-008",
+          "scr-009",
+          "scr-010",
+          "scr-013",
+          "scr-015",
+          "api-015",
+          "api-016",
+          "api-017",
+          "api-018",
+          "feat-001",
+          "feat-004",
+          "feat-006"
+        ],
+        "metadata": {
+          "fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true,
+              "description": "MongoDB ObjectId"
+            },
+            {
+              "name": "userId",
+              "type": "reference",
+              "required": true,
+              "referenceEntity": "User"
+            },
+            {
+              "name": "gameSessionId",
+              "type": "reference",
+              "required": true,
+              "referenceEntity": "GameSession"
+            },
+            {
+              "name": "score",
+              "type": "number",
+              "required": true,
+              "description": "최종 점수"
+            },
+            {
+              "name": "rank",
+              "type": "number",
+              "required": false,
+              "description": "리더보드 순위"
+            },
+            {
+              "name": "gameMode",
+              "type": "enum",
+              "required": true,
+              "description": "게임 모드"
+            },
+            {
+              "name": "levelReached",
+              "type": "number",
+              "required": true,
+              "description": "달성 레벨"
+            },
+            {
+              "name": "accuracy",
+              "type": "number",
+              "required": false,
+              "description": "명중률 (%)"
+            },
+            {
+              "name": "isPersonalBest",
+              "type": "boolean",
+              "required": true,
+              "description": "개인 최고 기록 여부"
+            },
+            {
+              "name": "recordedAt",
+              "type": "date",
+              "required": true,
+              "description": "점수 기록 시간"
+            }
+          ],
+          "sourceScreenIds": [
+            "scr-008",
+            "scr-009",
+            "scr-010"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "ent-005": {
+        "id": "ent-005",
+        "objectType": "entity",
+        "title": "GameSettings",
+        "summary": "Entity: GameSettings (11 fields)",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "scr-006",
+          "scr-007",
+          "scr-011",
+          "api-019",
+          "api-020",
+          "feat-001",
+          "feat-004",
+          "feat-005"
+        ],
+        "metadata": {
+          "fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true,
+              "description": "MongoDB ObjectId"
+            },
+            {
+              "name": "userId",
+              "type": "reference",
+              "required": true,
+              "referenceEntity": "User",
+              "unique": true
+            },
+            {
+              "name": "masterVolume",
+              "type": "number",
+              "required": true,
+              "description": "전체 볼륨 (0-100)"
+            },
+            {
+              "name": "musicVolume",
+              "type": "number",
+              "required": true,
+              "description": "배경음 볼륨 (0-100)"
+            },
+            {
+              "name": "sfxVolume",
+              "type": "number",
+              "required": true,
+              "description": "효과음 볼륨 (0-100)"
+            },
+            {
+              "name": "isMuted",
+              "type": "boolean",
+              "required": true,
+              "description": "전체 음소거 여부"
+            },
+            {
+              "name": "graphicsQuality",
+              "type": "enum",
+              "required": true,
+              "description": "low, medium, high"
+            },
+            {
+              "name": "difficulty",
+              "type": "enum",
+              "required": true,
+              "description": "easy, normal, hard"
+            },
+            {
+              "name": "keyBindings",
+              "type": "object",
+              "required": true,
+              "description": "키보드 단축키 매핑"
+            },
+            {
+              "name": "showTutorial",
+              "type": "boolean",
+              "required": true,
+              "description": "튜토리얼 표시 여부"
+            },
+            {
+              "name": "updatedAt",
+              "type": "date",
+              "required": true,
+              "description": "설정 수정 시간"
+            }
+          ],
+          "sourceScreenIds": [
+            "scr-011"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "ent-006": {
+        "id": "ent-006",
+        "objectType": "entity",
+        "title": "Level",
+        "summary": "Entity: Level (14 fields)",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "scr-016",
+          "api-021",
+          "api-022",
+          "api-023",
+          "api-024",
+          "feat-006"
+        ],
+        "metadata": {
+          "fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true,
+              "description": "MongoDB ObjectId"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "required": true,
+              "description": "레벨 이름"
+            },
+            {
+              "name": "creatorId",
+              "type": "reference",
+              "required": true,
+              "referenceEntity": "User"
+            },
+            {
+              "name": "isOfficial",
+              "type": "boolean",
+              "required": true,
+              "description": "공식 레벨 여부"
+            },
+            {
+              "name": "difficulty",
+              "type": "enum",
+              "required": true,
+              "description": "easy, medium, hard, expert"
+            },
+            {
+              "name": "gridData",
+              "type": "array",
+              "required": true,
+              "description": "브릭 배치 데이터"
+            },
+            {
+              "name": "ballSpeed",
+              "type": "number",
+              "required": true,
+              "description": "공 속도"
+            },
+            {
+              "name": "paddleSize",
+              "type": "number",
+              "required": true,
+              "description": "패들 크기"
+            },
+            {
+              "name": "initialLives",
+              "type": "number",
+              "required": true,
+              "description": "초기 생명 수"
+            },
+            {
+              "name": "isPublished",
+              "type": "boolean",
+              "required": true,
+              "description": "게시 여부"
+            },
+            {
+              "name": "playCount",
+              "type": "number",
+              "required": true,
+              "description": "플레이 횟수"
+            },
+            {
+              "name": "rating",
+              "type": "number",
+              "required": false,
+              "description": "평균 평점"
+            },
+            {
+              "name": "createdAt",
+              "type": "date",
+              "required": true,
+              "description": "생성일"
+            },
+            {
+              "name": "updatedAt",
+              "type": "date",
+              "required": true,
+              "description": "수정일"
+            }
+          ],
+          "sourceScreenIds": [
+            "scr-016"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "ent-007": {
+        "id": "ent-007",
+        "objectType": "entity",
+        "title": "Achievement",
+        "summary": "Entity: Achievement (8 fields)",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "scr-018",
+          "api-025",
+          "feat-004"
+        ],
+        "metadata": {
+          "fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true,
+              "description": "MongoDB ObjectId"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "required": true,
+              "description": "업적 이름"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "required": true,
+              "description": "업적 설명"
+            },
+            {
+              "name": "iconUrl",
+              "type": "string",
+              "required": true,
+              "description": "업적 아이콘 URL"
+            },
+            {
+              "name": "condition",
+              "type": "object",
+              "required": true,
+              "description": "달성 조건"
+            },
+            {
+              "name": "reward",
+              "type": "object",
+              "required": false,
+              "description": "보상 정보"
+            },
+            {
+              "name": "category",
+              "type": "enum",
+              "required": true,
+              "description": "score, level, collection, special"
+            },
+            {
+              "name": "createdAt",
+              "type": "date",
+              "required": true,
+              "description": "생성일"
+            }
+          ],
+          "sourceScreenIds": [
+            "scr-018"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "ent-008": {
+        "id": "ent-008",
+        "objectType": "entity",
+        "title": "UserAchievement",
+        "summary": "Entity: UserAchievement (6 fields)",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "scr-019",
+          "api-026",
+          "feat-007"
+        ],
+        "metadata": {
+          "fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true,
+              "description": "MongoDB ObjectId"
+            },
+            {
+              "name": "userId",
+              "type": "reference",
+              "required": true,
+              "referenceEntity": "User"
+            },
+            {
+              "name": "achievementId",
+              "type": "reference",
+              "required": true,
+              "referenceEntity": "Achievement"
+            },
+            {
+              "name": "progress",
+              "type": "number",
+              "required": true,
+              "description": "현재 진행률"
+            },
+            {
+              "name": "isUnlocked",
+              "type": "boolean",
+              "required": true,
+              "description": "달성 여부"
+            },
+            {
+              "name": "unlockedAt",
+              "type": "date",
+              "required": false,
+              "description": "달성 시간"
+            }
+          ],
+          "sourceScreenIds": [
+            "scr-018"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "ent-009": {
+        "id": "ent-009",
+        "objectType": "entity",
+        "title": "Notification",
+        "summary": "Entity: Notification (8 fields)",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "scr-020",
+          "api-029",
+          "api-030",
+          "feat-006"
+        ],
+        "metadata": {
+          "fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true,
+              "description": "MongoDB ObjectId"
+            },
+            {
+              "name": "userId",
+              "type": "reference",
+              "required": true,
+              "referenceEntity": "User"
+            },
+            {
+              "name": "type",
+              "type": "enum",
+              "required": true,
+              "description": "system, achievement, social, update"
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "required": true,
+              "description": "알림 제목"
+            },
+            {
+              "name": "message",
+              "type": "string",
+              "required": true,
+              "description": "알림 내용"
+            },
+            {
+              "name": "data",
+              "type": "object",
+              "required": false,
+              "description": "추가 데이터"
+            },
+            {
+              "name": "isRead",
+              "type": "boolean",
+              "required": true,
+              "description": "읽음 여부"
+            },
+            {
+              "name": "createdAt",
+              "type": "date",
+              "required": true,
+              "description": "생성 시간"
+            }
+          ],
+          "sourceScreenIds": [
+            "scr-020"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "ent-010": {
+        "id": "ent-010",
+        "objectType": "entity",
+        "title": "ShopItem",
+        "summary": "Entity: ShopItem (10 fields)",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "api-027",
+          "api-028"
+        ],
+        "metadata": {
+          "fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true,
+              "description": "MongoDB ObjectId"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "required": true,
+              "description": "아이템 이름"
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "required": true,
+              "description": "아이템 설명"
+            },
+            {
+              "name": "category",
+              "type": "enum",
+              "required": true,
+              "description": "powerup, skin, life, coinPack"
+            },
+            {
+              "name": "price",
+              "type": "number",
+              "required": true,
+              "description": "가격 (코인)"
+            },
+            {
+              "name": "imageUrl",
+              "type": "string",
+              "required": true,
+              "description": "아이템 이미지 URL"
+            },
+            {
+              "name": "effect",
+              "type": "object",
+              "required": true,
+              "description": "효과 데이터"
+            },
+            {
+              "name": "isActive",
+              "type": "boolean",
+              "required": true,
+              "description": "판매 활성 여부"
+            },
+            {
+              "name": "stock",
+              "type": "number",
+              "required": false,
+              "description": "재고 (-1: 무제한)"
+            },
+            {
+              "name": "createdAt",
+              "type": "date",
+              "required": true,
+              "description": "생성일"
+            }
+          ],
+          "sourceScreenIds": [
+            "scr-019"
+          ]
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-001": {
+        "id": "api-001",
+        "objectType": "api_endpoint",
+        "title": "POST /api/auth/register",
+        "summary": "새 사용자 등록",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-001",
+          "feat-002"
+        ],
+        "metadata": {
+          "method": "POST",
+          "path": "/api/auth/register",
+          "relatedEntityId": "ent-001",
+          "relatedFeatureId": "feat-002"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-002": {
+        "id": "api-002",
+        "objectType": "api_endpoint",
+        "title": "POST /api/auth/login",
+        "summary": "사용자 로그인 및 JWT 토큰 발급",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-001",
+          "feat-002"
+        ],
+        "metadata": {
+          "method": "POST",
+          "path": "/api/auth/login",
+          "relatedEntityId": "ent-001",
+          "relatedFeatureId": "feat-002"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-003": {
+        "id": "api-003",
+        "objectType": "api_endpoint",
+        "title": "POST /api/auth/logout",
+        "summary": "사용자 로그아웃 및 세션 삭제",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-002",
+          "feat-002"
+        ],
+        "metadata": {
+          "method": "POST",
+          "path": "/api/auth/logout",
+          "relatedEntityId": "ent-002",
+          "relatedFeatureId": "feat-002"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-004": {
+        "id": "api-004",
+        "objectType": "api_endpoint",
+        "title": "POST /api/auth/refresh",
+        "summary": "JWT 리프레시 토큰을 이용한 액세스 토큰 갱신",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-002",
+          "feat-002"
+        ],
+        "metadata": {
+          "method": "POST",
+          "path": "/api/auth/refresh",
+          "relatedEntityId": "ent-002",
+          "relatedFeatureId": "feat-002"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-005": {
+        "id": "api-005",
+        "objectType": "api_endpoint",
+        "title": "POST /api/auth/forgot-password",
+        "summary": "비밀번호 재설정 이메일 발송",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-001",
+          "feat-002"
+        ],
+        "metadata": {
+          "method": "POST",
+          "path": "/api/auth/forgot-password",
+          "relatedEntityId": "ent-001",
+          "relatedFeatureId": "feat-002"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-006": {
+        "id": "api-006",
+        "objectType": "api_endpoint",
+        "title": "POST /api/auth/reset-password",
+        "summary": "토큰 기반 비밀번호 재설정",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-001",
+          "feat-002"
+        ],
+        "metadata": {
+          "method": "POST",
+          "path": "/api/auth/reset-password",
+          "relatedEntityId": "ent-001",
+          "relatedFeatureId": "feat-002"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-007": {
+        "id": "api-007",
+        "objectType": "api_endpoint",
+        "title": "GET /api/users/me",
+        "summary": "현재 로그인한 사용자 정보 조회",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-001",
+          "feat-002"
+        ],
+        "metadata": {
+          "method": "GET",
+          "path": "/api/users/me",
+          "relatedEntityId": "ent-001",
+          "relatedFeatureId": "feat-002"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-008": {
+        "id": "api-008",
+        "objectType": "api_endpoint",
+        "title": "PUT /api/users/me",
+        "summary": "현재 사용자 정보 수정",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-001",
+          "feat-002"
+        ],
+        "metadata": {
+          "method": "PUT",
+          "path": "/api/users/me",
+          "relatedEntityId": "ent-001",
+          "relatedFeatureId": "feat-002"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-009": {
+        "id": "api-009",
+        "objectType": "api_endpoint",
+        "title": "DELETE /api/users/me",
+        "summary": "사용자 계정 삭제",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-001",
+          "feat-002"
+        ],
+        "metadata": {
+          "method": "DELETE",
+          "path": "/api/users/me",
+          "relatedEntityId": "ent-001",
+          "relatedFeatureId": "feat-002"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-010": {
+        "id": "api-010",
+        "objectType": "api_endpoint",
+        "title": "POST /api/games/sessions",
+        "summary": "새 게임 세션 생성",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-003",
+          "feat-001"
+        ],
+        "metadata": {
+          "method": "POST",
+          "path": "/api/games/sessions",
+          "relatedEntityId": "ent-003",
+          "relatedFeatureId": "feat-001"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-011": {
+        "id": "api-011",
+        "objectType": "api_endpoint",
+        "title": "PUT /api/games/sessions/:sessionId",
+        "summary": "게임 세션 상태 업데이트 (점수, 레벨, 생명)",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-003",
+          "feat-001"
+        ],
+        "metadata": {
+          "method": "PUT",
+          "path": "/api/games/sessions/:sessionId",
+          "relatedEntityId": "ent-003",
+          "relatedFeatureId": "feat-001"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-012": {
+        "id": "api-012",
+        "objectType": "api_endpoint",
+        "title": "POST /api/games/sessions/:sessionId/end",
+        "summary": "게임 세션 종료",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-003",
+          "feat-001"
+        ],
+        "metadata": {
+          "method": "POST",
+          "path": "/api/games/sessions/:sessionId/end",
+          "relatedEntityId": "ent-003",
+          "relatedFeatureId": "feat-001"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-013": {
+        "id": "api-013",
+        "objectType": "api_endpoint",
+        "title": "POST /api/games/sessions/:sessionId/pause",
+        "summary": "게임 일시정지",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-003",
+          "feat-001"
+        ],
+        "metadata": {
+          "method": "POST",
+          "path": "/api/games/sessions/:sessionId/pause",
+          "relatedEntityId": "ent-003",
+          "relatedFeatureId": "feat-001"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-014": {
+        "id": "api-014",
+        "objectType": "api_endpoint",
+        "title": "POST /api/games/sessions/:sessionId/resume",
+        "summary": "게임 재개",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-003",
+          "feat-001"
+        ],
+        "metadata": {
+          "method": "POST",
+          "path": "/api/games/sessions/:sessionId/resume",
+          "relatedEntityId": "ent-003",
+          "relatedFeatureId": "feat-001"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-015": {
+        "id": "api-015",
+        "objectType": "api_endpoint",
+        "title": "POST /api/scores",
+        "summary": "게임 종료 후 점수 저장",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-004",
+          "feat-004"
+        ],
+        "metadata": {
+          "method": "POST",
+          "path": "/api/scores",
+          "relatedEntityId": "ent-004",
+          "relatedFeatureId": "feat-004"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-016": {
+        "id": "api-016",
+        "objectType": "api_endpoint",
+        "title": "GET /api/scores/leaderboard",
+        "summary": "글로벌 리더보드 조회",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-004",
+          "feat-004"
+        ],
+        "metadata": {
+          "method": "GET",
+          "path": "/api/scores/leaderboard",
+          "relatedEntityId": "ent-004",
+          "relatedFeatureId": "feat-004"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-017": {
+        "id": "api-017",
+        "objectType": "api_endpoint",
+        "title": "GET /api/scores/me",
+        "summary": "현재 사용자의 점수 기록 조회",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-004",
+          "feat-004"
+        ],
+        "metadata": {
+          "method": "GET",
+          "path": "/api/scores/me",
+          "relatedEntityId": "ent-004",
+          "relatedFeatureId": "feat-004"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-018": {
+        "id": "api-018",
+        "objectType": "api_endpoint",
+        "title": "GET /api/scores/rank/:userId",
+        "summary": "특정 사용자의 리더보드 순위 조회",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-004",
+          "feat-004"
+        ],
+        "metadata": {
+          "method": "GET",
+          "path": "/api/scores/rank/:userId",
+          "relatedEntityId": "ent-004",
+          "relatedFeatureId": "feat-004"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-019": {
+        "id": "api-019",
+        "objectType": "api_endpoint",
+        "title": "GET /api/settings",
+        "summary": "현재 사용자의 게임 설정 조회",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-005",
+          "feat-005"
+        ],
+        "metadata": {
+          "method": "GET",
+          "path": "/api/settings",
+          "relatedEntityId": "ent-005",
+          "relatedFeatureId": "feat-005"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-020": {
+        "id": "api-020",
+        "objectType": "api_endpoint",
+        "title": "PUT /api/settings",
+        "summary": "게임 설정 저장",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-005",
+          "feat-005"
+        ],
+        "metadata": {
+          "method": "PUT",
+          "path": "/api/settings",
+          "relatedEntityId": "ent-005",
+          "relatedFeatureId": "feat-005"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-021": {
+        "id": "api-021",
+        "objectType": "api_endpoint",
+        "title": "GET /api/levels",
+        "summary": "사용 가능한 레벨 목록 조회",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-006",
+          "feat-003"
+        ],
+        "metadata": {
+          "method": "GET",
+          "path": "/api/levels",
+          "relatedEntityId": "ent-006",
+          "relatedFeatureId": "feat-003"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-022": {
+        "id": "api-022",
+        "objectType": "api_endpoint",
+        "title": "GET /api/levels/:levelId",
+        "summary": "특정 레벨 상세 정보 조회",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-006",
+          "feat-003"
+        ],
+        "metadata": {
+          "method": "GET",
+          "path": "/api/levels/:levelId",
+          "relatedEntityId": "ent-006",
+          "relatedFeatureId": "feat-003"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-023": {
+        "id": "api-023",
+        "objectType": "api_endpoint",
+        "title": "POST /api/levels",
+        "summary": "커스텀 레벨 생성",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-006",
+          "feat-003"
+        ],
+        "metadata": {
+          "method": "POST",
+          "path": "/api/levels",
+          "relatedEntityId": "ent-006",
+          "relatedFeatureId": "feat-003"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-024": {
+        "id": "api-024",
+        "objectType": "api_endpoint",
+        "title": "PUT /api/levels/:levelId",
+        "summary": "커스텀 레벨 수정",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-006",
+          "feat-003"
+        ],
+        "metadata": {
+          "method": "PUT",
+          "path": "/api/levels/:levelId",
+          "relatedEntityId": "ent-006",
+          "relatedFeatureId": "feat-003"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-025": {
+        "id": "api-025",
+        "objectType": "api_endpoint",
+        "title": "GET /api/achievements",
+        "summary": "전체 업적 목록 조회",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-007",
+          "feat-004"
+        ],
+        "metadata": {
+          "method": "GET",
+          "path": "/api/achievements",
+          "relatedEntityId": "ent-007",
+          "relatedFeatureId": "feat-004"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-026": {
+        "id": "api-026",
+        "objectType": "api_endpoint",
+        "title": "GET /api/achievements/me",
+        "summary": "현재 사용자의 업적 현황 조회",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-008",
+          "feat-004"
+        ],
+        "metadata": {
+          "method": "GET",
+          "path": "/api/achievements/me",
+          "relatedEntityId": "ent-008",
+          "relatedFeatureId": "feat-004"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-027": {
+        "id": "api-027",
+        "objectType": "api_endpoint",
+        "title": "GET /api/shop/items",
+        "summary": "상점 아이템 목록 조회",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-010",
+          "feat-007"
+        ],
+        "metadata": {
+          "method": "GET",
+          "path": "/api/shop/items",
+          "relatedEntityId": "ent-010",
+          "relatedFeatureId": "feat-007"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-028": {
+        "id": "api-028",
+        "objectType": "api_endpoint",
+        "title": "POST /api/shop/purchase",
+        "summary": "아이템 구매 처리",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-010",
+          "feat-007"
+        ],
+        "metadata": {
+          "method": "POST",
+          "path": "/api/shop/purchase",
+          "relatedEntityId": "ent-010",
+          "relatedFeatureId": "feat-007"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-029": {
+        "id": "api-029",
+        "objectType": "api_endpoint",
+        "title": "GET /api/notifications",
+        "summary": "사용자 알림 목록 조회",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-009",
+          "feat-006"
+        ],
+        "metadata": {
+          "method": "GET",
+          "path": "/api/notifications",
+          "relatedEntityId": "ent-009",
+          "relatedFeatureId": "feat-006"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-030": {
+        "id": "api-030",
+        "objectType": "api_endpoint",
+        "title": "PUT /api/notifications/:notificationId/read",
+        "summary": "알림 읽음 처리",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-009",
+          "feat-006"
+        ],
+        "metadata": {
+          "method": "PUT",
+          "path": "/api/notifications/:notificationId/read",
+          "relatedEntityId": "ent-009",
+          "relatedFeatureId": "feat-006"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-031": {
+        "id": "api-031",
+        "objectType": "api_endpoint",
+        "title": "GET /api/admin/stats",
+        "summary": "어드민 대시보드 통계 데이터",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-001",
+          "feat-006"
+        ],
+        "metadata": {
+          "method": "GET",
+          "path": "/api/admin/stats",
+          "relatedEntityId": "ent-001",
+          "relatedFeatureId": "feat-006"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-032": {
+        "id": "api-032",
+        "objectType": "api_endpoint",
+        "title": "GET /api/admin/users",
+        "summary": "어드민: 전체 사용자 목록 조회",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-001",
+          "feat-006"
+        ],
+        "metadata": {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "relatedEntityId": "ent-001",
+          "relatedFeatureId": "feat-006"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-033": {
+        "id": "api-033",
+        "objectType": "api_endpoint",
+        "title": "PUT /api/admin/users/:userId/role",
+        "summary": "어드민: 사용자 역할 변경",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-001",
+          "feat-006"
+        ],
+        "metadata": {
+          "method": "PUT",
+          "path": "/api/admin/users/:userId/role",
+          "relatedEntityId": "ent-001",
+          "relatedFeatureId": "feat-006"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-034": {
+        "id": "api-034",
+        "objectType": "api_endpoint",
+        "title": "DELETE /api/admin/users/:userId",
+        "summary": "어드민: 사용자 계정 삭제",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-001",
+          "feat-006"
+        ],
+        "metadata": {
+          "method": "DELETE",
+          "path": "/api/admin/users/:userId",
+          "relatedEntityId": "ent-001",
+          "relatedFeatureId": "feat-006"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      },
+      "api-035": {
+        "id": "api-035",
+        "objectType": "api_endpoint",
+        "title": "GET /api/admin/activity-log",
+        "summary": "어드민: 시스템 활동 로그 조회",
+        "status": "ai_suggested",
+        "priority": "p1",
+        "confidence": 0.85,
+        "tags": [],
+        "source": "discovery",
+        "linkedObjectIds": [
+          "ent-001",
+          "feat-006"
+        ],
+        "metadata": {
+          "method": "GET",
+          "path": "/api/admin/activity-log",
+          "relatedEntityId": "ent-001",
+          "relatedFeatureId": "feat-006"
+        },
+        "provenance": {
+          "createdByType": "ai",
+          "sourceView": "db_api",
+          "note": "Generated from Discovery via LLM"
+        },
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z",
+        "createdBy": "ai",
+        "updatedBy": "ai",
+        "isDeleted": false
+      }
+    },
+    "relations": {
+      "drel-0": {
+        "id": "drel-0",
+        "fromId": "step-001",
+        "toId": "step-002",
+        "relationType": "depends_on",
+        "direction": "forward",
+        "label": "next step",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z"
+      },
+      "drel-1": {
+        "id": "drel-1",
+        "fromId": "step-002",
+        "toId": "step-003",
+        "relationType": "depends_on",
+        "direction": "forward",
+        "label": "next step",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z"
+      },
+      "drel-2": {
+        "id": "drel-2",
+        "fromId": "step-003",
+        "toId": "step-004",
+        "relationType": "depends_on",
+        "direction": "forward",
+        "label": "next step",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.825Z",
+        "updatedAt": "2026-03-30T20:47:30.825Z"
+      },
+      "drel-3": {
+        "id": "drel-3",
+        "fromId": "step-001",
+        "toId": "step-002",
+        "relationType": "depends_on",
+        "direction": "forward",
+        "label": "next step",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-4": {
+        "id": "drel-4",
+        "fromId": "step-002",
+        "toId": "step-003",
+        "relationType": "depends_on",
+        "direction": "forward",
+        "label": "next step",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-5": {
+        "id": "drel-5",
+        "fromId": "step-003",
+        "toId": "step-004",
+        "relationType": "depends_on",
+        "direction": "forward",
+        "label": "next step",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-6": {
+        "id": "drel-6",
+        "fromId": "step-004",
+        "toId": "step-005",
+        "relationType": "depends_on",
+        "direction": "forward",
+        "label": "next step",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-7": {
+        "id": "drel-7",
+        "fromId": "step-001",
+        "toId": "step-002",
+        "relationType": "depends_on",
+        "direction": "forward",
+        "label": "next step",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-8": {
+        "id": "drel-8",
+        "fromId": "step-002",
+        "toId": "step-003",
+        "relationType": "depends_on",
+        "direction": "forward",
+        "label": "next step",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-9": {
+        "id": "drel-9",
+        "fromId": "step-003",
+        "toId": "step-004",
+        "relationType": "depends_on",
+        "direction": "forward",
+        "label": "next step",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-10": {
+        "id": "drel-10",
+        "fromId": "scr-001",
+        "toId": "feat-001",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "랜딩 페이지 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-11": {
+        "id": "drel-11",
+        "fromId": "scr-002",
+        "toId": "feat-002",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "로그인 페이지 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-12": {
+        "id": "drel-12",
+        "fromId": "scr-003",
+        "toId": "feat-002",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "회원가입 페이지 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-13": {
+        "id": "drel-13",
+        "fromId": "scr-004",
+        "toId": "feat-002",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "비밀번호 재설정 페이지 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-14": {
+        "id": "drel-14",
+        "fromId": "scr-005",
+        "toId": "feat-001",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "게임 메인 메뉴 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-15": {
+        "id": "drel-15",
+        "fromId": "scr-005",
+        "toId": "feat-003",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "게임 메인 메뉴 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-16": {
+        "id": "drel-16",
+        "fromId": "scr-006",
+        "toId": "feat-001",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "게임플레이 화면 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-17": {
+        "id": "drel-17",
+        "fromId": "scr-006",
+        "toId": "feat-004",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "게임플레이 화면 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-18": {
+        "id": "drel-18",
+        "fromId": "scr-007",
+        "toId": "feat-001",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "일시정지 화면 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-19": {
+        "id": "drel-19",
+        "fromId": "scr-008",
+        "toId": "feat-001",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "게임 오버 화면 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-20": {
+        "id": "drel-20",
+        "fromId": "scr-008",
+        "toId": "feat-004",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "게임 오버 화면 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-21": {
+        "id": "drel-21",
+        "fromId": "scr-009",
+        "toId": "feat-004",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "리더보드 화면 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-22": {
+        "id": "drel-22",
+        "fromId": "scr-010",
+        "toId": "feat-002",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "마이 프로필 페이지 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-23": {
+        "id": "drel-23",
+        "fromId": "scr-010",
+        "toId": "feat-004",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "마이 프로필 페이지 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-24": {
+        "id": "drel-24",
+        "fromId": "scr-011",
+        "toId": "feat-005",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "게임 설정 페이지 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-25": {
+        "id": "drel-25",
+        "fromId": "scr-012",
+        "toId": "feat-002",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "계정 설정 페이지 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-26": {
+        "id": "drel-26",
+        "fromId": "scr-013",
+        "toId": "feat-006",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "어드민 대시보드 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-27": {
+        "id": "drel-27",
+        "fromId": "scr-014",
+        "toId": "feat-006",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "사용자 관리 페이지 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-28": {
+        "id": "drel-28",
+        "fromId": "scr-015",
+        "toId": "feat-006",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "게임 통계 페이지 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-29": {
+        "id": "drel-29",
+        "fromId": "scr-015",
+        "toId": "feat-004",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "게임 통계 페이지 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-30": {
+        "id": "drel-30",
+        "fromId": "scr-016",
+        "toId": "feat-001",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "게임 레벨 편집기 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-31": {
+        "id": "drel-31",
+        "fromId": "scr-016",
+        "toId": "feat-006",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "게임 레벨 편집기 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-32": {
+        "id": "drel-32",
+        "fromId": "scr-017",
+        "toId": "feat-001",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "튜토리얼 화면 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-33": {
+        "id": "drel-33",
+        "fromId": "scr-018",
+        "toId": "feat-004",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "업적 화면 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-34": {
+        "id": "drel-34",
+        "fromId": "scr-019",
+        "toId": "feat-007",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "상점 화면 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-35": {
+        "id": "drel-35",
+        "fromId": "scr-020",
+        "toId": "feat-006",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "알림 센터 implements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-36": {
+        "id": "drel-36",
+        "fromId": "scr-001",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "랜딩 페이지 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-37": {
+        "id": "drel-37",
+        "fromId": "scr-002",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "로그인 페이지 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-38": {
+        "id": "drel-38",
+        "fromId": "scr-002",
+        "toId": "ent-002",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "로그인 페이지 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-39": {
+        "id": "drel-39",
+        "fromId": "scr-003",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "회원가입 페이지 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-40": {
+        "id": "drel-40",
+        "fromId": "scr-004",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "비밀번호 재설정 페이지 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-41": {
+        "id": "drel-41",
+        "fromId": "scr-005",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임 메인 메뉴 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-42": {
+        "id": "drel-42",
+        "fromId": "scr-005",
+        "toId": "ent-003",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임 메인 메뉴 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-43": {
+        "id": "drel-43",
+        "fromId": "scr-006",
+        "toId": "ent-003",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임플레이 화면 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-44": {
+        "id": "drel-44",
+        "fromId": "scr-006",
+        "toId": "ent-004",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임플레이 화면 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-45": {
+        "id": "drel-45",
+        "fromId": "scr-006",
+        "toId": "ent-005",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임플레이 화면 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-46": {
+        "id": "drel-46",
+        "fromId": "scr-007",
+        "toId": "ent-003",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "일시정지 화면 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-47": {
+        "id": "drel-47",
+        "fromId": "scr-007",
+        "toId": "ent-005",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "일시정지 화면 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-48": {
+        "id": "drel-48",
+        "fromId": "scr-008",
+        "toId": "ent-003",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임 오버 화면 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-49": {
+        "id": "drel-49",
+        "fromId": "scr-008",
+        "toId": "ent-004",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임 오버 화면 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-50": {
+        "id": "drel-50",
+        "fromId": "scr-009",
+        "toId": "ent-004",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "리더보드 화면 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-51": {
+        "id": "drel-51",
+        "fromId": "scr-010",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "마이 프로필 페이지 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-52": {
+        "id": "drel-52",
+        "fromId": "scr-010",
+        "toId": "ent-003",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "마이 프로필 페이지 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-53": {
+        "id": "drel-53",
+        "fromId": "scr-010",
+        "toId": "ent-004",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "마이 프로필 페이지 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-54": {
+        "id": "drel-54",
+        "fromId": "scr-011",
+        "toId": "ent-005",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임 설정 페이지 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-55": {
+        "id": "drel-55",
+        "fromId": "scr-012",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "계정 설정 페이지 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-56": {
+        "id": "drel-56",
+        "fromId": "scr-013",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "어드민 대시보드 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-57": {
+        "id": "drel-57",
+        "fromId": "scr-013",
+        "toId": "ent-003",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "어드민 대시보드 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-58": {
+        "id": "drel-58",
+        "fromId": "scr-013",
+        "toId": "ent-004",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "어드민 대시보드 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-59": {
+        "id": "drel-59",
+        "fromId": "scr-014",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "사용자 관리 페이지 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-60": {
+        "id": "drel-60",
+        "fromId": "scr-015",
+        "toId": "ent-003",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임 통계 페이지 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-61": {
+        "id": "drel-61",
+        "fromId": "scr-015",
+        "toId": "ent-004",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임 통계 페이지 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-62": {
+        "id": "drel-62",
+        "fromId": "scr-016",
+        "toId": "ent-006",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임 레벨 편집기 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-63": {
+        "id": "drel-63",
+        "fromId": "scr-017",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "튜토리얼 화면 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-64": {
+        "id": "drel-64",
+        "fromId": "scr-018",
+        "toId": "ent-007",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "업적 화면 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-65": {
+        "id": "drel-65",
+        "fromId": "scr-019",
+        "toId": "ent-008",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "상점 화면 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-66": {
+        "id": "drel-66",
+        "fromId": "scr-020",
+        "toId": "ent-009",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "알림 센터 uses",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-67": {
+        "id": "drel-67",
+        "fromId": "arch-001",
+        "toId": "feat-001",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "React 프론트엔드 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-68": {
+        "id": "drel-68",
+        "fromId": "arch-001",
+        "toId": "feat-002",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "React 프론트엔드 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-69": {
+        "id": "drel-69",
+        "fromId": "arch-001",
+        "toId": "feat-003",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "React 프론트엔드 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-70": {
+        "id": "drel-70",
+        "fromId": "arch-001",
+        "toId": "feat-004",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "React 프론트엔드 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-71": {
+        "id": "drel-71",
+        "fromId": "arch-001",
+        "toId": "feat-005",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "React 프론트엔드 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-72": {
+        "id": "drel-72",
+        "fromId": "arch-001",
+        "toId": "feat-006",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "React 프론트엔드 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-73": {
+        "id": "drel-73",
+        "fromId": "arch-001",
+        "toId": "feat-007",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "React 프론트엔드 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-74": {
+        "id": "drel-74",
+        "fromId": "arch-002",
+        "toId": "feat-002",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "Node.js 백엔드 API supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-75": {
+        "id": "drel-75",
+        "fromId": "arch-002",
+        "toId": "feat-004",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "Node.js 백엔드 API supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-76": {
+        "id": "drel-76",
+        "fromId": "arch-002",
+        "toId": "feat-005",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "Node.js 백엔드 API supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-77": {
+        "id": "drel-77",
+        "fromId": "arch-002",
+        "toId": "feat-006",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "Node.js 백엔드 API supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-78": {
+        "id": "drel-78",
+        "fromId": "arch-003",
+        "toId": "feat-002",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "MongoDB 데이터베이스 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-79": {
+        "id": "drel-79",
+        "fromId": "arch-003",
+        "toId": "feat-004",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "MongoDB 데이터베이스 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-80": {
+        "id": "drel-80",
+        "fromId": "arch-003",
+        "toId": "feat-005",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "MongoDB 데이터베이스 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-81": {
+        "id": "drel-81",
+        "fromId": "arch-003",
+        "toId": "feat-006",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "MongoDB 데이터베이스 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-82": {
+        "id": "drel-82",
+        "fromId": "arch-004",
+        "toId": "feat-004",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "Redis 캐시 레이어 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-83": {
+        "id": "drel-83",
+        "fromId": "arch-005",
+        "toId": "feat-001",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "Socket.io 실시간 통신 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-84": {
+        "id": "drel-84",
+        "fromId": "arch-005",
+        "toId": "feat-004",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "Socket.io 실시간 통신 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-85": {
+        "id": "drel-85",
+        "fromId": "arch-006",
+        "toId": "feat-001",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "AWS S3/CDN 스토리지 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-86": {
+        "id": "drel-86",
+        "fromId": "arch-006",
+        "toId": "feat-003",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "AWS S3/CDN 스토리지 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-87": {
+        "id": "drel-87",
+        "fromId": "arch-006",
+        "toId": "feat-006",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "AWS S3/CDN 스토리지 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-88": {
+        "id": "drel-88",
+        "fromId": "arch-007",
+        "toId": "feat-001",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "게임 서버 클러스터 supports",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-89": {
+        "id": "drel-89",
+        "fromId": "step-001",
+        "toId": "scr-002",
+        "relationType": "maps_to",
+        "direction": "forward",
+        "label": "사용자가 이메일/비밀번호 입력 후 로그인 버튼 클릭 → screen",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-90": {
+        "id": "drel-90",
+        "fromId": "step-001",
+        "toId": "feat-002",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "사용자가 이메일/비밀번호 입력 후 로그인 버튼 클릭 → feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-91": {
+        "id": "drel-91",
+        "fromId": "step-002",
+        "toId": "scr-002",
+        "relationType": "maps_to",
+        "direction": "forward",
+        "label": "프론트엔드가 POST /api/auth/login 요청 전송 → screen",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-92": {
+        "id": "drel-92",
+        "fromId": "step-002",
+        "toId": "feat-002",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "프론트엔드가 POST /api/auth/login 요청 전송 → feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-93": {
+        "id": "drel-93",
+        "fromId": "step-003",
+        "toId": "feat-002",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "백엔드가 사용자 인증 및 JWT 토큰 생성 → feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-94": {
+        "id": "drel-94",
+        "fromId": "step-004",
+        "toId": "scr-005",
+        "relationType": "maps_to",
+        "direction": "forward",
+        "label": "토큰을 HttpOnly 쿠키에 저장하고 게임 메인 메뉴로 리다이렉트 → screen",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-95": {
+        "id": "drel-95",
+        "fromId": "step-004",
+        "toId": "feat-002",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "토큰을 HttpOnly 쿠키에 저장하고 게임 메인 메뉴로 리다이렉트 → feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-96": {
+        "id": "drel-96",
+        "fromId": "step-001",
+        "toId": "scr-006",
+        "relationType": "maps_to",
+        "direction": "forward",
+        "label": "게임 세션 생성 API 호출 → screen",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-97": {
+        "id": "drel-97",
+        "fromId": "step-001",
+        "toId": "feat-001",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "게임 세션 생성 API 호출 → feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-98": {
+        "id": "drel-98",
+        "fromId": "step-002",
+        "toId": "scr-006",
+        "relationType": "maps_to",
+        "direction": "forward",
+        "label": "Canvas 기반 게임 루프 시작 → screen",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-99": {
+        "id": "drel-99",
+        "fromId": "step-002",
+        "toId": "feat-001",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "Canvas 기반 게임 루프 시작 → feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-100": {
+        "id": "drel-100",
+        "fromId": "step-003",
+        "toId": "scr-006",
+        "relationType": "maps_to",
+        "direction": "forward",
+        "label": "브릭 충돌 시 점수 계산 및 실시간 점수 UI 업데이트 → screen",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-101": {
+        "id": "drel-101",
+        "fromId": "step-003",
+        "toId": "feat-004",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "브릭 충돌 시 점수 계산 및 실시간 점수 UI 업데이트 → feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-102": {
+        "id": "drel-102",
+        "fromId": "step-004",
+        "toId": "scr-008",
+        "relationType": "maps_to",
+        "direction": "forward",
+        "label": "게임 종료 시 최종 점수 서버에 전송 → screen",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-103": {
+        "id": "drel-103",
+        "fromId": "step-004",
+        "toId": "feat-004",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "게임 종료 시 최종 점수 서버에 전송 → feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-104": {
+        "id": "drel-104",
+        "fromId": "step-005",
+        "toId": "scr-008",
+        "relationType": "maps_to",
+        "direction": "forward",
+        "label": "점수 저장 및 리더보드 업데이트 → screen",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-105": {
+        "id": "drel-105",
+        "fromId": "step-005",
+        "toId": "feat-004",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "점수 저장 및 리더보드 업데이트 → feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-106": {
+        "id": "drel-106",
+        "fromId": "step-001",
+        "toId": "scr-013",
+        "relationType": "maps_to",
+        "direction": "forward",
+        "label": "어드민 권한 인증 확인 → screen",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-107": {
+        "id": "drel-107",
+        "fromId": "step-001",
+        "toId": "feat-006",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "어드민 권한 인증 확인 → feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-108": {
+        "id": "drel-108",
+        "fromId": "step-002",
+        "toId": "scr-013",
+        "relationType": "maps_to",
+        "direction": "forward",
+        "label": "전체 사용자 수, 게임 세션 수, 일일 활성用户 조회 → screen",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-109": {
+        "id": "drel-109",
+        "fromId": "step-002",
+        "toId": "feat-006",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "전체 사용자 수, 게임 세션 수, 일일 활성用户 조회 → feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-110": {
+        "id": "drel-110",
+        "fromId": "step-003",
+        "toId": "scr-013",
+        "relationType": "maps_to",
+        "direction": "forward",
+        "label": "최근 활동 로그 조회 및 표시 → screen",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-111": {
+        "id": "drel-111",
+        "fromId": "step-003",
+        "toId": "feat-006",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "최근 활동 로그 조회 및 표시 → feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-112": {
+        "id": "drel-112",
+        "fromId": "step-004",
+        "toId": "scr-013",
+        "relationType": "maps_to",
+        "direction": "forward",
+        "label": "WebSocket을 통한 실시간 통계 업데이트 구독 → screen",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-113": {
+        "id": "drel-113",
+        "fromId": "step-004",
+        "toId": "feat-006",
+        "relationType": "implements",
+        "direction": "forward",
+        "label": "WebSocket을 통한 실시간 통계 업데이트 구독 → feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-114": {
+        "id": "drel-114",
+        "fromId": "api-001",
+        "toId": "ent-001",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "POST /api/auth/register",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-115": {
+        "id": "drel-115",
+        "fromId": "api-001",
+        "toId": "feat-002",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-116": {
+        "id": "drel-116",
+        "fromId": "api-002",
+        "toId": "ent-001",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "POST /api/auth/login",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-117": {
+        "id": "drel-117",
+        "fromId": "api-002",
+        "toId": "feat-002",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-118": {
+        "id": "drel-118",
+        "fromId": "api-003",
+        "toId": "ent-002",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "POST /api/auth/logout",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-119": {
+        "id": "drel-119",
+        "fromId": "api-003",
+        "toId": "feat-002",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-120": {
+        "id": "drel-120",
+        "fromId": "api-004",
+        "toId": "ent-002",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "POST /api/auth/refresh",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-121": {
+        "id": "drel-121",
+        "fromId": "api-004",
+        "toId": "feat-002",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-122": {
+        "id": "drel-122",
+        "fromId": "api-005",
+        "toId": "ent-001",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "POST /api/auth/forgot-password",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-123": {
+        "id": "drel-123",
+        "fromId": "api-005",
+        "toId": "feat-002",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-124": {
+        "id": "drel-124",
+        "fromId": "api-006",
+        "toId": "ent-001",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "POST /api/auth/reset-password",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-125": {
+        "id": "drel-125",
+        "fromId": "api-006",
+        "toId": "feat-002",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-126": {
+        "id": "drel-126",
+        "fromId": "api-007",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "GET /api/users/me",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-127": {
+        "id": "drel-127",
+        "fromId": "api-007",
+        "toId": "feat-002",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-128": {
+        "id": "drel-128",
+        "fromId": "api-008",
+        "toId": "ent-001",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "PUT /api/users/me",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-129": {
+        "id": "drel-129",
+        "fromId": "api-008",
+        "toId": "feat-002",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-130": {
+        "id": "drel-130",
+        "fromId": "api-009",
+        "toId": "ent-001",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "DELETE /api/users/me",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-131": {
+        "id": "drel-131",
+        "fromId": "api-009",
+        "toId": "feat-002",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-132": {
+        "id": "drel-132",
+        "fromId": "api-010",
+        "toId": "ent-003",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "POST /api/games/sessions",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-133": {
+        "id": "drel-133",
+        "fromId": "api-010",
+        "toId": "feat-001",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-134": {
+        "id": "drel-134",
+        "fromId": "api-011",
+        "toId": "ent-003",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "PUT /api/games/sessions/:sessionId",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-135": {
+        "id": "drel-135",
+        "fromId": "api-011",
+        "toId": "feat-001",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-136": {
+        "id": "drel-136",
+        "fromId": "api-012",
+        "toId": "ent-003",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "POST /api/games/sessions/:sessionId/end",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-137": {
+        "id": "drel-137",
+        "fromId": "api-012",
+        "toId": "feat-001",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-138": {
+        "id": "drel-138",
+        "fromId": "api-013",
+        "toId": "ent-003",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "POST /api/games/sessions/:sessionId/pause",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-139": {
+        "id": "drel-139",
+        "fromId": "api-013",
+        "toId": "feat-001",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-140": {
+        "id": "drel-140",
+        "fromId": "api-014",
+        "toId": "ent-003",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "POST /api/games/sessions/:sessionId/resume",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-141": {
+        "id": "drel-141",
+        "fromId": "api-014",
+        "toId": "feat-001",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-142": {
+        "id": "drel-142",
+        "fromId": "api-015",
+        "toId": "ent-004",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "POST /api/scores",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-143": {
+        "id": "drel-143",
+        "fromId": "api-015",
+        "toId": "feat-004",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-144": {
+        "id": "drel-144",
+        "fromId": "api-016",
+        "toId": "ent-004",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "GET /api/scores/leaderboard",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-145": {
+        "id": "drel-145",
+        "fromId": "api-016",
+        "toId": "feat-004",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-146": {
+        "id": "drel-146",
+        "fromId": "api-017",
+        "toId": "ent-004",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "GET /api/scores/me",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-147": {
+        "id": "drel-147",
+        "fromId": "api-017",
+        "toId": "feat-004",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-148": {
+        "id": "drel-148",
+        "fromId": "api-018",
+        "toId": "ent-004",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "GET /api/scores/rank/:userId",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-149": {
+        "id": "drel-149",
+        "fromId": "api-018",
+        "toId": "feat-004",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-150": {
+        "id": "drel-150",
+        "fromId": "api-019",
+        "toId": "ent-005",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "GET /api/settings",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-151": {
+        "id": "drel-151",
+        "fromId": "api-019",
+        "toId": "feat-005",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-152": {
+        "id": "drel-152",
+        "fromId": "api-020",
+        "toId": "ent-005",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "PUT /api/settings",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-153": {
+        "id": "drel-153",
+        "fromId": "api-020",
+        "toId": "feat-005",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-154": {
+        "id": "drel-154",
+        "fromId": "api-021",
+        "toId": "ent-006",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "GET /api/levels",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-155": {
+        "id": "drel-155",
+        "fromId": "api-021",
+        "toId": "feat-003",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-156": {
+        "id": "drel-156",
+        "fromId": "api-022",
+        "toId": "ent-006",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "GET /api/levels/:levelId",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-157": {
+        "id": "drel-157",
+        "fromId": "api-022",
+        "toId": "feat-003",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-158": {
+        "id": "drel-158",
+        "fromId": "api-023",
+        "toId": "ent-006",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "POST /api/levels",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-159": {
+        "id": "drel-159",
+        "fromId": "api-023",
+        "toId": "feat-003",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-160": {
+        "id": "drel-160",
+        "fromId": "api-024",
+        "toId": "ent-006",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "PUT /api/levels/:levelId",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-161": {
+        "id": "drel-161",
+        "fromId": "api-024",
+        "toId": "feat-003",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-162": {
+        "id": "drel-162",
+        "fromId": "api-025",
+        "toId": "ent-007",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "GET /api/achievements",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-163": {
+        "id": "drel-163",
+        "fromId": "api-025",
+        "toId": "feat-004",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-164": {
+        "id": "drel-164",
+        "fromId": "api-026",
+        "toId": "ent-008",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "GET /api/achievements/me",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-165": {
+        "id": "drel-165",
+        "fromId": "api-026",
+        "toId": "feat-004",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-166": {
+        "id": "drel-166",
+        "fromId": "api-027",
+        "toId": "ent-010",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "GET /api/shop/items",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-167": {
+        "id": "drel-167",
+        "fromId": "api-027",
+        "toId": "feat-007",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-168": {
+        "id": "drel-168",
+        "fromId": "api-028",
+        "toId": "ent-010",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "POST /api/shop/purchase",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-169": {
+        "id": "drel-169",
+        "fromId": "api-028",
+        "toId": "feat-007",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-170": {
+        "id": "drel-170",
+        "fromId": "api-029",
+        "toId": "ent-009",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "GET /api/notifications",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-171": {
+        "id": "drel-171",
+        "fromId": "api-029",
+        "toId": "feat-006",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-172": {
+        "id": "drel-172",
+        "fromId": "api-030",
+        "toId": "ent-009",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "PUT /api/notifications/:notificationId/read",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-173": {
+        "id": "drel-173",
+        "fromId": "api-030",
+        "toId": "feat-006",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-174": {
+        "id": "drel-174",
+        "fromId": "api-031",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "GET /api/admin/stats",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-175": {
+        "id": "drel-175",
+        "fromId": "api-031",
+        "toId": "feat-006",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-176": {
+        "id": "drel-176",
+        "fromId": "api-032",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "GET /api/admin/users",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-177": {
+        "id": "drel-177",
+        "fromId": "api-032",
+        "toId": "feat-006",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-178": {
+        "id": "drel-178",
+        "fromId": "api-033",
+        "toId": "ent-001",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "PUT /api/admin/users/:userId/role",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-179": {
+        "id": "drel-179",
+        "fromId": "api-033",
+        "toId": "feat-006",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-180": {
+        "id": "drel-180",
+        "fromId": "api-034",
+        "toId": "ent-001",
+        "relationType": "writes",
+        "direction": "forward",
+        "label": "DELETE /api/admin/users/:userId",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-181": {
+        "id": "drel-181",
+        "fromId": "api-034",
+        "toId": "feat-006",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-182": {
+        "id": "drel-182",
+        "fromId": "api-035",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "GET /api/admin/activity-log",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-183": {
+        "id": "drel-183",
+        "fromId": "api-035",
+        "toId": "feat-006",
+        "relationType": "supports",
+        "direction": "forward",
+        "label": "API supports feature",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-184": {
+        "id": "drel-184",
+        "fromId": "feat-001",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임 핵심 엔진 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-185": {
+        "id": "drel-185",
+        "fromId": "feat-001",
+        "toId": "ent-003",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임 핵심 엔진 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-186": {
+        "id": "drel-186",
+        "fromId": "feat-001",
+        "toId": "ent-004",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임 핵심 엔진 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-187": {
+        "id": "drel-187",
+        "fromId": "feat-001",
+        "toId": "ent-005",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임 핵심 엔진 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-188": {
+        "id": "drel-188",
+        "fromId": "feat-002",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "사용자 인증 시스템 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-189": {
+        "id": "drel-189",
+        "fromId": "feat-002",
+        "toId": "ent-002",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "사용자 인증 시스템 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-190": {
+        "id": "drel-190",
+        "fromId": "feat-003",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임 모드 시스템 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-191": {
+        "id": "drel-191",
+        "fromId": "feat-003",
+        "toId": "ent-003",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임 모드 시스템 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-192": {
+        "id": "drel-192",
+        "fromId": "feat-004",
+        "toId": "ent-003",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "점수 및 리더보드 시스템 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-193": {
+        "id": "drel-193",
+        "fromId": "feat-004",
+        "toId": "ent-004",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "점수 및 리더보드 시스템 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-194": {
+        "id": "drel-194",
+        "fromId": "feat-004",
+        "toId": "ent-005",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "점수 및 리더보드 시스템 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-195": {
+        "id": "drel-195",
+        "fromId": "feat-004",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "점수 및 리더보드 시스템 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-196": {
+        "id": "drel-196",
+        "fromId": "feat-004",
+        "toId": "ent-007",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "점수 및 리더보드 시스템 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-197": {
+        "id": "drel-197",
+        "fromId": "feat-005",
+        "toId": "ent-005",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임 설정 관리 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-198": {
+        "id": "drel-198",
+        "fromId": "feat-006",
+        "toId": "ent-001",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "어드민 대시보드 및 관리 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-199": {
+        "id": "drel-199",
+        "fromId": "feat-006",
+        "toId": "ent-003",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "어드민 대시보드 및 관리 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-200": {
+        "id": "drel-200",
+        "fromId": "feat-006",
+        "toId": "ent-004",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "어드민 대시보드 및 관리 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-201": {
+        "id": "drel-201",
+        "fromId": "feat-006",
+        "toId": "ent-006",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "어드민 대시보드 및 관리 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-202": {
+        "id": "drel-202",
+        "fromId": "feat-006",
+        "toId": "ent-009",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "어드민 대시보드 및 관리 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      },
+      "drel-203": {
+        "id": "drel-203",
+        "fromId": "feat-007",
+        "toId": "ent-008",
+        "relationType": "reads",
+        "direction": "forward",
+        "label": "게임 상점 및 아이템 시스템 uses entity",
+        "style": "solid",
+        "status": "ai_suggested",
+        "source": "discovery",
+        "createdAt": "2026-03-30T20:47:30.826Z",
+        "updatedAt": "2026-03-30T20:47:30.826Z"
+      }
+    },
+    "validationIssues": {},
+    "auditEvents": []
+  },
+  "ssot_saved_at": "2026-03-30T20:47:30.929Z"
 }
