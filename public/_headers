@@ -1,0 +1,14 @@
+# Cloudflare Pages 설정
+# https://developers.cloudflare.com/pages/platform/serving-pages/#single-page-application
+
+[build]
+  command = "npm run build"
+  directory = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

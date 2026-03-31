@@ -1,0 +1,6 @@
+# Cloudflare Pages 설정
+# 이 파일을 public 폴더나 dist 폴더에 배치하세요
+
+# SPA 라우팅을 위한 설정
+# 모든 라우트를 index.html로 리다이렉트
+/*    /index.html   200
