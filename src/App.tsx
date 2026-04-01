@@ -54,6 +54,7 @@ interface GameState {
 
 // Constants
 const PADDLE_BASE_WIDTH = 100;
+const PADDLE_MOBILE_WIDTH = 80; // 모바일에서 패들 크기 축소
 const PADDLE_HEIGHT = 15;
 const BALL_RADIUS = 8;
 const GAME_WIDTH = 800;
@@ -370,6 +371,11 @@ function App() {
   const [canvasSize, setCanvasSize] = useState({ width: GAME_WIDTH, height: GAME_HEIGHT });
   const [isMobile, setIsMobile] = useState(false);
 
+  // 모바일 패들 너비
+  const getPaddleWidth = useCallback(() => {
+    return isMobile ? PADDLE_MOBILE_WIDTH : PADDLE_BASE_WIDTH;
+  }, [isMobile]);
+
   // 화면 크기 감지
   useEffect(() => {
     const updateSize = () => {
@@ -380,14 +386,29 @@ function App() {
       const mobile = windowWidth <= 768 || 'ontouchstart' in window;
       setIsMobile(mobile);
       
-      // 게임 화면을 좌우로 꽉 채우되 비율 유지
-      let newWidth = windowWidth;
-      let newHeight = windowWidth * (GAME_HEIGHT / GAME_WIDTH);
+      // 모바일과 데스크톱 다르게 화면 비율 설정
+      let newWidth: number;
+      let newHeight: number;
       
-      // 너무 높으면 비율로 조정
-      if (newHeight > windowHeight) {
-        newHeight = windowHeight;
-        newWidth = newHeight * (GAME_WIDTH / GAME_HEIGHT);
+      if (mobile) {
+        // 모바일: 더 긴 세로 비율 (9:16) - 게임 영역을 더 위아래로 길게
+        newWidth = windowWidth * 0.95; // 좌우 여백
+        newHeight = newWidth * (16 / 9); // 9:16 비율
+        
+        // 화면보다 높이가 크면windowHeight에 맞춤
+        if (newHeight > windowHeight * 0.92) {
+          newHeight = windowHeight * 0.92;
+          newWidth = newHeight * (9 / 16);
+        }
+      } else {
+        // 데스크톱: 4:3 비율 유지
+        newWidth = windowWidth;
+        newHeight = windowWidth * (GAME_HEIGHT / GAME_WIDTH);
+        
+        if (newHeight > windowHeight) {
+          newHeight = windowHeight;
+          newWidth = newHeight * (GAME_WIDTH / GAME_HEIGHT);
+        }
       }
       
       setCanvasSize({ width: newWidth, height: newHeight });
@@ -416,7 +437,7 @@ function App() {
       level: 1,
       paddle: {
         ...prev.paddle,
-        width: PADDLE_BASE_WIDTH,
+        width: isMobile ? PADDLE_MOBILE_WIDTH : PADDLE_BASE_WIDTH,
         speed: prev.paddle.baseSpeed,
       },
       roundStats: {
@@ -440,7 +461,7 @@ function App() {
         phase: 'playing',
         paddle: {
           ...prev.paddle,
-          width: PADDLE_BASE_WIDTH,
+          width: isMobile ? PADDLE_MOBILE_WIDTH : PADDLE_BASE_WIDTH,
           speed: prev.paddle.baseSpeed,
         },
         roundStats: {
@@ -590,7 +611,8 @@ function App() {
             soundManager.playWallBounce();
           }
 
-          const paddleTop = GAME_HEIGHT - PADDLE_HEIGHT - 20;
+          // 모바일: 패들 위치를 아래로 이동 (터치 영역 확대)
+          const paddleTop = isMobile ? GAME_HEIGHT - PADDLE_HEIGHT - 40 : GAME_HEIGHT - PADDLE_HEIGHT - 20;
           if (
             newBall.y + newBall.radius > paddleTop &&
             newBall.y - newBall.radius < paddleTop + PADDLE_HEIGHT &&
@@ -747,7 +769,8 @@ function App() {
       }
     });
 
-    const paddleY = GAME_HEIGHT - PADDLE_HEIGHT - 20;
+    // 모바일: 패들을 더 아래로 이동 (터치 영역 확대)
+    const paddleY = isMobile ? GAME_HEIGHT - PADDLE_HEIGHT - 40 : GAME_HEIGHT - PADDLE_HEIGHT - 20;
     ctx.fillStyle = gameState.paddleColor;
     ctx.shadowBlur = 15;
     ctx.shadowColor = gameState.paddleColor;
